@@ -4,37 +4,36 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Flexible UI",
+    title: "Adaptive UI",
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        Panoramica uses <a href="https://dockview.dev/">Dockview</a> to provide
-        a lightweight, flexible windowing experience, letting you lay out and
-        work on conversations as you like. Conversations are rendered and sorted
-        to bring out the most relevant information.
+        Panoramica uses <a href="https://dockview.dev/">Dockview</a> to create a
+        nimble, customizable work environment. Navigate through conversations
+        with ease, prioritizing key information.
       </>
     ),
   },
   {
-    title: "Context-Aware AI",
+    title: "Context-Driven AI",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        Write prompts as simple as "What is happening here?" and the AI will
-        respond accurately based on the context the user is in - a single
-        message, a conversation, a user, a channel, or a whole community.
+        With simple prompts like "What's happening here?", our AI responds
+        intelligently, adapting its analysis to a single message, a
+        conversation, a user, a channel, or even an entire community.
       </>
     ),
   },
   {
-    title: "Pluggable Data + Models",
+    title: "Versatile Data + Models",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Panoramica is open source. Load in conversational data from any data
-        source. Plug in different vector stores and LLMs thanks to{" "}
-        <a href="https://langchain.com/">LangChain</a>. Create your own UI
-        widgets. Use Panoramica's graph data model and AI to power other
+        As an open-source solution, Panoramica offers flexibility. Integrate
+        data from various sources, choose from different vector stores and LLMs
+        via <a href="https://langchain.com/">LangChain</a>, craft your own UI
+        widgets, or use our graph data model and AI to enhance other
         experiences.
       </>
     ),
