@@ -49,7 +49,7 @@ const config = {
         title: "Panoramica",
         logo: {
           alt: "Panoramica Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {
