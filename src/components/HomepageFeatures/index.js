@@ -27,13 +27,14 @@ const FeatureList = [
     ),
   },
   {
-    title: "Open Source",
+    title: "Pluggable Data + Models",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        Extend Panoramica to pull in conversational data from any source. Theme
-        to your liking. Plug in different vector stores and LLMs. Create your
-        own UI widgets. Use Panoramica's graph data model and AI to power other
+        Panoramica is open source. Load in conversational data from any data
+        source. Plug in different vector stores and LLMs thanks to{" "}
+        <a href="https://langchain.com/">LangChain</a>. Create your own UI
+        widgets. Use Panoramica's graph data model and AI to power other
         experiences.
       </>
     ),
