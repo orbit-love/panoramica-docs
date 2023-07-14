@@ -5,7 +5,6 @@ import styles from "./styles.module.css";
 const FeatureList = [
   {
     title: "Adaptive UI",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
         Panoramica uses <a href="https://dockview.dev/">Dockview</a> to create a
@@ -16,7 +15,6 @@ const FeatureList = [
   },
   {
     title: "Context-Driven AI",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
         With simple prompts like "What's happening here?", our AI responds
@@ -27,7 +25,6 @@ const FeatureList = [
   },
   {
     title: "Versatile Data + Models",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
         As an open-source solution, Panoramica offers flexibility. Integrate
@@ -43,9 +40,7 @@ const FeatureList = [
 function Feature({ Svg, title, description }) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
+      <div className="text--center">&nbsp;</div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
