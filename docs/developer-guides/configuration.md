@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Configure Panoramica
+# Configuration
 
 Configuration options available for Panoramica.
 

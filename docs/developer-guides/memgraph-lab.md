@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 ---
 
-# Visualize with Memgraph Lab
+# Use Memgraph Lab
 
 A guide about how to connect to the Memgraph Lab instance,
 run graph queries to explore the data, and customize with a stylesheet.

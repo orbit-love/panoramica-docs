@@ -27,8 +27,8 @@ The first supported data source for Panoramica is [Orbit](https://orbit.love/). 
 The Orbit API has introduced several new features that enable conversation processing:
 
 - Providing all text content needed to reproduce messages
-- Generating parent/child references for messaging threads
-- Ingesting and providing parent activities, enabling full thread rendering
+- Providing parent information for activities that are replies
+- Fetching parent activities for replies when they don't exist
 
 :::info
 
