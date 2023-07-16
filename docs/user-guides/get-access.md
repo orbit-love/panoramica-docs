@@ -12,7 +12,7 @@ to contribute back to the project.
 The second way is to use Panoramica is to use an instance that
 Orbit has provisioned. This instance is available to any user of Orbit
 and there is no fee. If you're interested in trying out Panoramica and giving
-feedback, email [josh@orbit.love](mailto:josh@orbit.love);
+feedback, email [josh@orbit.love](mailto:josh@orbit.love).
 
 ## Authentication
 
