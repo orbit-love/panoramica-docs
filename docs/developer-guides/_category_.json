@@ -1,0 +1,9 @@
+{
+  "label": "Developer Guides",
+  "position": 3,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "See guides for doing things with Panoramica"
+  }
+}

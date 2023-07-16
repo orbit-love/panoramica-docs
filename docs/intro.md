@@ -17,7 +17,7 @@ Panoramica's mission is to supercharge conversations, from monitoring and analyz
 Panoramica revolves around three main operations:
 
 1. **Ingesting** conversational data
-2. **Preparing** data for use by the UI and AI
+2. **Transforming** data for use by the UI and AI
 3. **Serving** experiences to users
 
 ## Ingesting Data
@@ -38,7 +38,7 @@ Panoramica is created and maintained by the Orbit team. While Orbit remains a su
 
 All data is stored in a single table named `Activity`, which includes about a dozen fields. This design choice is intentional to avoid unnecessary complexity and ease integration. All information related to the activity, including references like the actor, is stored alongside the activity. They are later transformed into additional entities. The `Activity` table stores everything necessary to analyze and reproduce threaded conversations.
 
-## Preparing Data
+## Transforming Data
 
 Panoramica fetches data from the APIs of data sources and stores it in PostgreSQL, employing the [Prisma](https://prisma.io/) ORM as an adapter. Subsequently, data is processed and stored in a graph format for use by the UI and AI. The open-source [Memgraph](https://memgraph.com/) database is used as the graph database.
 
@@ -51,6 +51,12 @@ With a graph database, we can quickly craft performant queries to answer questio
 - Which conversation has the largest depth?
 - Which conversation involves the most unique actors?
 - Which actor has participated in the most conversations? As an originator? As a replier?
+
+We can also tap into the power of graph algorithms to answer questions like:
+
+- What's the shortest introduction path between two members?
+- What are the sub-communities within the community? Who are the bridges between them?
+- Who has the most reach or influence? (e.g. with Pagerank)
 
 All these queries, and many more, are straightforward and efficient, answering questions about individual conversations and the panorama of conversations stretching across a community.
 

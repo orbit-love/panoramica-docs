@@ -1,0 +1,9 @@
+{
+  "label": "User Guides",
+  "position": 4,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "For end users to learn how to use Panoramica"
+  }
+}

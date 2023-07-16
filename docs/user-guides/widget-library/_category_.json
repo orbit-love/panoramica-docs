@@ -1,0 +1,8 @@
+{
+  "label": "Widget Library",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "An explanation of each available widget. Widgets are listed in alphabetical order."
+  }
+}
