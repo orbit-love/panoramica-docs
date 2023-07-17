@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# Contributing
+# Contribute
 
 About contributing to the project.
 

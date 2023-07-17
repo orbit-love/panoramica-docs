@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Supported Sources
+# Data Sources
 
 This page is a list of integrations currently supported, including info
 about how the integrations works (e.g. via orbit or not)
@@ -11,3 +11,7 @@ about how the integrations works (e.g. via orbit or not)
 - Discourse
 - GitHub
 - Twitter
+
+## Importing Data from Orbit
+
+How it works, field mapping, etc.
