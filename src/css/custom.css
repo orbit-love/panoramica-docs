@@ -41,6 +41,7 @@
   font-family: Avenir Next,sans-serif;
   --ifm-heading-font-family: font-family: Avenir Next,sans-serif;
   --ifm-h2-font-size: font-size: 2.5rem;
+  --ifm-link-color: var(--ifm-color-primary-lightest);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -56,8 +57,11 @@
 }
 
 navbar_title { text-transform: uppercase; }
+
 h2.subhead { 
   text-align: center;
   color: var(--ifm-color-primary-dark);
   font-size: 2.5rem;
  }
+ tertiary { color: var(--ifm-color-primary-lightest)}
+ center { text-align: center;}
