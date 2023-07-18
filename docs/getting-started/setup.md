@@ -8,8 +8,11 @@ Clone Panoramica and get it working locally.
 
 ## Clone the repository
 
-- git clone
-- yarn
+```sh
+git clone https://github.com/orbit-love/panoramica.git
+```
+
+We use yarn as the package manager, if you don't have it installed, you can get it with `npm install -g yarn`. Then run `yarn`
 
 ## Set up dependencies
 
@@ -29,6 +32,8 @@ openssl rand -base64 32
 ```
 
 ### PostgreSQL
+If you don't have it installed, you can follow the instructions here: https://www.postgresql.org/download/
+Then, set these variables in `.env`:
 
 ```text
 POSTGRES_PRISMA_URL=postgresql://...
@@ -36,6 +41,7 @@ POSTGRES_URL_NON_POOLING=postgresql://...
 ```
 
 ### Memgraph
+You'll need Memgraph running locally: https://memgraph.com/docs/memgraph/installation
 
 ```shell
 MEMGRAPH_URI=bolt://localhost:7687
