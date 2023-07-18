@@ -3,7 +3,9 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import HomepageFeaturesGeneral from "@site/src/components/HomepageFeaturesGeneral";
+import HomepageFeaturesDev from "@site/src/components/HomepageFeaturesDev";
+
 
 import styles from "./index.module.css";
 
@@ -36,7 +38,11 @@ export default function Home() {
     >
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <HomepageFeaturesGeneral />
+        <section>
+          <h2 className="subhead">Build with Panoramica</h2> 
+        </section>
+        <HomepageFeaturesDev />
       </main>
     </Layout>
   );

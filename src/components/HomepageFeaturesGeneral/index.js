@@ -4,34 +4,26 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Adaptive UI",
+    title: "Your inbox, your views",
     description: (
       <>
-        Panoramica uses <a href="https://dockview.dev/">Dockview</a> to create a
-        nimble, customizable work environment. Navigate through conversations
-        with ease, prioritizing key information.
+        Follow channels, keywords, or entire channels across GitHub, Discord, and Twitter.
       </>
     ),
   },
   {
-    title: "Context-Driven AI",
+    title: "Simple conversation management",
     description: (
       <>
-        With simple prompts like "What's happening here?", our AI responds
-        intelligently, adapting its analysis to a single message, a
-        conversation, a user, a channel, or even an entire community.
+        Save and bookmark conversations for followup so no converation slips thru the
       </>
     ),
   },
   {
-    title: "Versatile Data + Models",
+    title: "Community and conversational visibility for everyone ",
     description: (
       <>
-        As an open-source solution, Panoramica offers flexibility. Integrate
-        data from various sources, choose from different vector stores and LLMs
-        via <a href="https://langchain.com/">LangChain</a>, craft your own UI
-        widgets, or use our graph data model and AI to enhance other
-        experiences.
+        Provide your whole team with the full view of every conversation. 
       </>
     ),
   },
