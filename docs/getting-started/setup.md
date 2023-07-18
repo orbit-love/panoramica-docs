@@ -32,7 +32,8 @@ openssl rand -base64 32
 ```
 
 ### PostgreSQL
-If you don't have it installed, you can follow the instructions here: https://www.postgresql.org/download/
+If you don't have it installed, you can follow the instructions here: https://www.postgresql.org/download/.
+
 Then, set these variables in `.env`:
 
 ```text
@@ -41,7 +42,7 @@ POSTGRES_URL_NON_POOLING=postgresql://...
 ```
 
 ### Memgraph
-You'll need Memgraph running locally: https://memgraph.com/docs/memgraph/installation
+You'll need Memgraph running locally: https://memgraph.com/docs/memgraph/installation.
 
 ```shell
 MEMGRAPH_URI=bolt://localhost:7687
