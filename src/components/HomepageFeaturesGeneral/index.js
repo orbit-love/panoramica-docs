@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 const FeatureList = [
   {
     title: "Your inbox, your views",
+    Svg: require('@site/static/img/thumb-inbox.svg').default,
     description: (
       <>
         Follow channels, keywords, or entire channels across GitHub, Discord, and Twitter.
@@ -13,6 +14,7 @@ const FeatureList = [
   },
   {
     title: "Simple conversation management",
+    Svg: require('@site/static/img/thumb-inbox.svg').default,
     description: (
       <>
         Save and bookmark conversations for followup so no converation slips thru the
@@ -21,6 +23,7 @@ const FeatureList = [
   },
   {
     title: "Community and conversational visibility for everyone ",
+    Svg: require('@site/static/img/thumb-inbox.svg').default,
     description: (
       <>
         Provide your whole team with the full view of every conversation. 
@@ -32,7 +35,9 @@ const FeatureList = [
 function Feature({ Svg, title, description }) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="text--center">&nbsp;</div>
+      <div className="text--center">
+        <Svg className={styles.featureSvg} role="img" />
+      </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
