@@ -6,7 +6,6 @@ import Layout from "@theme/Layout";
 import HomepageFeaturesGeneral from "@site/src/components/HomepageFeaturesGeneral";
 import HomepageFeaturesDev from "@site/src/components/HomepageFeaturesDev";
 
-
 import styles from "./index.module.css";
 
 function HomepageHeader() {
@@ -16,7 +15,12 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle margin-bottom--xs">{siteConfig.tagline}</p>
-        <p>powered by <a classnName="tertiary" href="https://orbit.love">Orbit</a></p>
+        <p>
+          powered by{" "}
+          <a classnName="tertiary" href="https://orbit.love">
+            Orbit
+          </a>
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -42,17 +46,17 @@ export default function Home() {
         <main>
           <HomepageFeaturesGeneral />
           <section>
-            <h2 className="subhead">🧰 Build with Panoramica</h2> 
+            <h2 className="subhead">🧰 Build with Panoramica</h2>
           </section>
           <HomepageFeaturesDev />
           <div class="row margin-bottom--xl">
             <div class="col col--12 center">
-            <Link
-            className="button button--secondary button--lg"
-            to="/docs/introduction"
-            >
-            Read the docs
-          </Link>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/introduction"
+              >
+                Read the docs
+              </Link>
             </div>
           </div>
         </main>
