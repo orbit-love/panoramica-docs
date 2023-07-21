@@ -17,16 +17,22 @@ function HomepageHeader() {
         <p className="hero__subtitle margin-bottom--xs">{siteConfig.tagline}</p>
         <p>
           powered by{" "}
-          <a classnName="tertiary" href="https://orbit.love">
+          <a classnName="tertiary" href="#">
             Orbit
           </a>
         </p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--secondary button--lg margin-horiz--md"
             to="/docs/introduction"
           >
-            Read the introduction
+            Try the demo
+          </Link>        
+          <Link
+            className="button button--secondary button--lg margin-horiz--md"
+            to="/docs/introduction"
+          >
+            Get access
           </Link>
         </div>
       </div>
