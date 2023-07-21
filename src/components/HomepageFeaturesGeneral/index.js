@@ -22,11 +22,11 @@ const FeatureList = [
     ),
   },
   {
-    title: "Community and conversational visibility for everyone ",
-    Svg: require('@site/static/img/thumb-inbox.svg').default,
+    title: "Looks great on mobile",
+    Svg: require('@site/static/img/thumb-mobile.svg').default,
     description: (
       <>
-        Provide your whole team with the full view of every conversation. 
+        Follow important threads while on the go (or while on the couch), and save key conversations for later. 
       </>
     ),
   },
