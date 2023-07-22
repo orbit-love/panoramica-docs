@@ -28,6 +28,7 @@ function SignupForm() {
     };
 
     // Send the post request
+
     fetch('https://app.orbit.love/submissions/59d63df6-a7a0-4770-81fe-0f6f2b43deba', options)
       .then(response => response.json())
       .then(data => {
@@ -39,7 +40,7 @@ function SignupForm() {
   };
 
   return (
-    <div class="col col--8 col--offset-2 center">
+    <div className="col col--8 col--offset-2 center">
       <h2 className="subhead">Signup for the hosted version</h2>
       <h3>If you'd like to try Panormica with your existing Orbit workspace, fill out this form and we'll reach out to enable it for you.</h3>
       <form onSubmit={handleSubmit} className="center">
