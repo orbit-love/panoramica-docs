@@ -15,7 +15,7 @@ GitHub repository of your Panoramica instance.
 
 On the next step, keep the defaults and add some environment variables.
 
-![Alt text](<CleanShot 2023-07-17 at 17.09.10@2x.jpg>)
+![Configure Vercel Project](vercel-configure-project.jpg)
 
 The environment variables you need to provide are:
 

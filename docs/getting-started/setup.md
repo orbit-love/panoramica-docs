@@ -25,7 +25,7 @@ yarn
 
 ### next-auth
 
-Create a `.env` file in the project directory and add these varaibles:
+Create a `.env` file in the project directory and add these variables:
 
 ```shell
 NEXTAUTH_URL=http://localhost:3000
