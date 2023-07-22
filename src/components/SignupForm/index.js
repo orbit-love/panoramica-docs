@@ -21,9 +21,6 @@ function SignupForm() {
     // Define the options for the fetch request
     const options = {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify(payload)
     };
 
