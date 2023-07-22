@@ -7,6 +7,7 @@ import HomepageFeaturesGeneral from "@site/src/components/HomepageFeaturesGenera
 import HomepageFeaturesDev from "@site/src/components/HomepageFeaturesDev";
 
 import styles from "./index.module.css";
+import SignupForm from "../components/SignupForm";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -51,11 +52,9 @@ export default function Home() {
       <div class="container">
         <main>
           <HomepageFeaturesGeneral />
-          <section>
-            <h2 className="subhead">🧰 Build with Panoramica</h2>
-          </section>
+          <h2 className="subhead">🧰 Build with Panoramica</h2>
           <HomepageFeaturesDev />
-          <div class="row margin-bottom--xl">
+          <div class="row">
             <div class="col col--12 center">
               <Link
                 className="button button--secondary button--lg"
@@ -64,6 +63,12 @@ export default function Home() {
                 Read the docs
               </Link>
             </div>
+          </div>
+
+          <div class="row margin-top--xl margin-bottom--xl">
+            
+              <SignupForm />
+
           </div>
         </main>
       </div>

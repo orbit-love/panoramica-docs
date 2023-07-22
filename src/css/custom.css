@@ -65,3 +65,22 @@ h2.subhead {
  .center { text-align: center;}
 
  .navbar__brand { text-transform: uppercase; }
+
+label {
+  width: 100%;;
+  display: block;
+  font-size: 20px;
+}
+
+input, textarea {
+  font-family:inherit;
+  font-size: inherit;
+  border: 1px solid #8e8e8e;
+  border-radius: 3px;
+  display: block;
+  margin: 5px auto;
+  margin-bottom: 20px;
+  padding: 10px 5px;
+  font-size: 20px;
+  width: 80%;
+} 
