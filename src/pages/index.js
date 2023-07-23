@@ -57,7 +57,7 @@ export default function Home() {
           <div class="row">
             <div class="col col--12 center">
               <Link
-                className="button button--secondary button--lg"
+                className="button button--primary button--lg"
                 to="/docs/introduction"
               >
                 Read the docs
