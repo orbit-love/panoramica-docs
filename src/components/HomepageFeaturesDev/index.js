@@ -60,9 +60,9 @@ function Subhead({ title }) {
 
 function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx("col")}>
       <div className="text--center">&nbsp;</div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding--md shadow--lw">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>

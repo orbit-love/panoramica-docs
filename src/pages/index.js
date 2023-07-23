@@ -66,9 +66,9 @@ export default function Home() {
           </div>
 
           <div class="row margin-top--xl margin-bottom--xl">
-            <div className="col col--8 col--offset-2 center">
-              <h2 className="subhead">Signup for the hosted version</h2>
-              <h3>If you'd like to try Panormica with your existing Orbit workspace, fill out this form and we'll reach out to enable it for you.</h3>
+            <div className="col col--8 col--offset-2 center form-box shadow--md">
+              <h2 className="subhead">Sign up for the hosted version</h2>
+              <h3 className="padding--md">If you'd like to try Panormica with your existing Orbit workspace, fill out this form and we'll reach out to enable it for you.</h3>
               <form action='https://app.orbit.love/submissions/59d63df6-a7a0-4770-81fe-0f6f2b43deba' method='POST'>
                 <label name='email'>✉️ Your email address</label>
                 <input type='text' id='application-email' name='email' />
