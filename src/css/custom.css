@@ -35,7 +35,8 @@
   --ifm-color-primary-darkest: #343f5a;
   --ifm-color-primary-light: #51638e;
   --ifm-color-primary-lighter: #556894;
-  --ifm-color-primary-lightest: #6376a5;
+  --ifm-color-primary-burnt: #CB5864;
+  --ifm-color-primary-purple: #834180;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   font-family: Avenir Next,sans-serif;
@@ -55,6 +56,19 @@
   --ifm-color-primary-lightest: #c4cce0;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.hero .button--secondary {
+  background: rgb(154,168,201);
+  background: linear-gradient(31deg, rgba(154,168,201,1) 0%, rgba(255,255,255,1) 100%);
+  border: none;
+}
+
+.hero .button--secondary:hover {
+  background: rgb(154,168,201);
+  background: linear-gradient(31deg, rgba(154,168,201,1) 0%, rgba(255,255,255,1) 50%);
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.3);
+  }
+
 
 h2.subhead { 
   text-align: center;
