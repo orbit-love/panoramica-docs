@@ -2,42 +2,41 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 
-const SubHead = [
+export const SubHead = [
   {
-    title: "Build with Panoramica"
-  }
- ]
+    title: "Build AI-powered experiences for conversational data",
+  },
+];
 
 const FeatureList = [
   {
-    title: "Adaptive UI",
+    title: "1. Ingests Conversations",
     description: (
       <>
-        Panoramica uses <a href="https://dockview.dev/">Dockview</a> to create a
-        nimble, customizable work environment. Navigate through conversations
-        with ease, prioritizing key information.
+        Panoramica pulls in messages from sources like Discord, GitHub,
+        Discourse, and Twitter. Important metadata like actors, mentions,
+        replies, and parent/reply relationships are included.
       </>
     ),
   },
   {
-    title: "Context-Driven AI",
+    title: "2. Updates the Graph",
     description: (
       <>
-        With simple prompts like "What's happening here?", our AI responds
-        intelligently, adapting its analysis to a single message, a
-        conversation, a user, a channel, or even an entire community.
+        Nodes are created for every message and actor. Conversation trees are
+        built by creating edges that join parents with replies. In this format,
+        we can do basic graph queries and more advanced algorithms.
       </>
     ),
   },
   {
-    title: "Versatile Data + Models",
+    title: "3. Constructs Smart Prompts",
     description: (
       <>
-        As an open-source solution, Panoramica offers flexibility. Integrate
-        data from various sources, choose from different vector stores and LLMs
-        via <a href="https://langchain.com/">LangChain</a>, craft your own UI
-        widgets, or use our graph data model and AI to enhance other
-        experiences.
+        Panoramica finds and formats the data so that an AI assistant can
+        correctly assist users with a wide variety of questions and tasks. Based
+        on the user's request, the right data is retrieved from vector and graph
+        databases.
       </>
     ),
   },
@@ -54,9 +53,6 @@ function Subhead({ title }) {
     </div>
   );
 }
-
-
-
 
 function Feature({ Svg, title, description }) {
   return (

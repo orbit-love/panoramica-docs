@@ -4,29 +4,33 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Your inbox, your views",
-    Svg: require('@site/static/img/thumb-inbox.svg').default,
+    title: "Monitor All The Channels",
+    Svg: require("@site/static/img/thumb-inbox.svg").default,
     description: (
       <>
-        Follow channels, keywords, or entire channels across GitHub, Discord, and Twitter.
+        Set up tabs to monitor all the channels you care about. Popular data
+        sources are available like GitHub, Discord, Discourse, and Twitter.
       </>
     ),
   },
   {
-    title: "Simple conversation management",
-    Svg: require('@site/static/img/thumb-inbox.svg').default,
+    title: "Save Important Conversations",
+    Svg: require("@site/static/img/thumb-inbox.svg").default,
     description: (
       <>
-        Save and bookmark conversations for followup so no converation slips thru the
+        Save important conversations for followup so no conversation slips
+        through the cracks.
       </>
     ),
   },
   {
-    title: "Looks great on mobile",
-    Svg: require('@site/static/img/thumb-mobile.svg').default,
+    title: "Ask the AI Assistant",
+    Svg: require("@site/static/img/thumb-mobile.svg").default,
     description: (
       <>
-        Follow important threads while on the go (or while on the couch), and save key conversations for later. 
+        Bring an AI assistant into any conversation. Ask the assistant to
+        summarize the conversation, find similar conversations, or help
+        brainstorm the perfect reply.
       </>
     ),
   },
@@ -35,7 +39,7 @@ const FeatureList = [
 function Feature({ Svg, title, description }) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="text--center">
+      <div className="margin-bottom--md text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">

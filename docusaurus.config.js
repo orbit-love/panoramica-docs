@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Explore conversational landscapes with AI",
-  tagline: "The universal inbox for a fragmented world.",
-  url: "https://panoramica.ai",
+  title: "Panoramica",
+  tagline: "Explore conversational landscapes with AI",
+  url: "https://panoramica.ai/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
