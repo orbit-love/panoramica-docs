@@ -5,7 +5,6 @@ import styles from "./styles.module.css";
 const FeatureList = [
   {
     title: "Monitor All The Channels",
-    Svg: require("@site/static/img/thumb-inbox.svg").default,
     description: (
       <>
         Set up tabs to monitor all the channels you care about. Popular data
@@ -15,7 +14,6 @@ const FeatureList = [
   },
   {
     title: "Save Important Conversations",
-    Svg: require("@site/static/img/thumb-inbox.svg").default,
     description: (
       <>
         Save important conversations for followup so no conversation slips
@@ -25,23 +23,18 @@ const FeatureList = [
   },
   {
     title: "Ask the AI Assistant",
-    Svg: require("@site/static/img/thumb-mobile.svg").default,
     description: (
       <>
         Bring an AI assistant into any conversation. Ask the assistant to
-        summarize the conversation, find similar conversations, or help
-        brainstorm the perfect reply.
+        summarize, find similar threads, or help brainstorm the perfect reply.
       </>
     ),
   },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ title, description }) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="margin-bottom--md text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>

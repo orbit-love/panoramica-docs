@@ -7,26 +7,26 @@
 /* You can override the default Infima variables here. */
 
 @font-face {
-  font-family: 'Avenir Next';
-  src: url('../../static/fonts/avenir/AvenirNextLTPro-Medium.otf') format('truetype');
+  font-family: "Avenir Next";
+  src: url("../../static/fonts/avenir/AvenirNextLTPro-Medium.otf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir Next';
-  src: url('../../static/fonts/avenir/AvenirNextLTPro-Bold.otf') format('otf');
+  font-family: "Avenir Next";
+  src: url("../../static/fonts/avenir/AvenirNextLTPro-Bold.otf") format("otf");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir Next';
-  src: url('../../static/fonts/avenir/AvenirNextLTPro-Heavy.otf') format('otf');
+  font-family: "Avenir Next";
+  src: url("../../static/fonts/avenir/AvenirNextLTPro-Heavy.otf") format("otf");
   font-weight: 700;
   font-style: normal;
 }
-
 
 :root {
   --ifm-color-primary: #4a5a81;
@@ -35,12 +35,15 @@
   --ifm-color-primary-darkest: #343f5a;
   --ifm-color-primary-light: #51638e;
   --ifm-color-primary-lighter: #556894;
-  --ifm-color-primary-lightest: #00c2e0;
+  --ifm-color-primary-burnt: #cb5864;
+  --ifm-color-primary-purple: #834180;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  font-family: Avenir Next,sans-serif;
-  --ifm-heading-font-family: font-family: Avenir Next,sans-serif;
+
+  font-family: Avenir Next, sans-serif;
+  --ifm-heading-font-family: Avenir Next, sans-serif;
   --ifm-link-color: var(--ifm-color-primary-lightest);
+  --ifm-link-color: #00c2e0;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -55,31 +58,99 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* h2.subhead {
+.hero {
+  background: rgb(81, 108, 170);
+  background: linear-gradient(
+    225deg,
+    rgba(81, 108, 170, 1) 0%,
+    rgba(74, 90, 129, 1) 100%
+  );
+}
+
+.hero .button--secondary {
+  background: rgb(154, 168, 201);
+  background: linear-gradient(
+    31deg,
+    rgba(154, 168, 201, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border: none;
+}
+
+.hero .button--secondary:hover {
+  background: rgb(154, 168, 201);
+  background: linear-gradient(
+    31deg,
+    rgba(154, 168, 201, 1) 0%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.3);
+}
+
+.center {
   text-align: center;
-  color: var(--ifm-color-primary-dark);
-  font-size: 2.5rem;
- } */
+}
 
- .center { text-align: center;}
-
- .navbar__brand { text-transform: uppercase; }
+.navbar__brand {
+  text-transform: uppercase;
+}
 
 label {
-  width: 100%;;
+  width: 100%;
   display: block;
   font-size: 20px;
 }
 
-input, textarea {
-  font-family:inherit;
+input,
+textarea {
+  font-family: inherit;
   font-size: inherit;
-  border: 1px solid #8e8e8e;
-  border-radius: 3px;
+  border: 1px solid #8596be;
+  border-radius: 10px;
   display: block;
   margin: 5px auto;
   margin-bottom: 20px;
-  padding: 10px 5px;
+  padding: 15px;
   font-size: 20px;
   width: 80%;
+}
+
+.form-box {
+  padding: 50px;
+  border-radius: 10px;
+}
+
+form .button.button--secondary {
+  background: rgb(97, 25, 94);
+  background: linear-gradient(
+    43deg,
+    rgba(97, 25, 94, 1) 0%,
+    rgba(203, 88, 100, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  color: #ffffff;
+  border: none;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 1s;
+}
+
+form .button.button--secondary:hover {
+  background: rgb(97, 25, 94);
+  background: linear-gradient(
+    43deg,
+    rgba(97, 25, 94, 1) 0%,
+    rgba(203, 88, 100, 1) 35%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  box-shadow: 0px 0px 10px 0px rgba(252, 176, 69, 0.3);
+}
+
+#screenshot-main {
+  background-image: url(../../static/img/ss-demo.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+  #screenshot-main {
+    background-image: url(../../static/img/ss-demo-dark.svg);
+  }
 }

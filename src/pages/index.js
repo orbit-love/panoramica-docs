@@ -29,7 +29,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg margin-horiz--md"
             to="https://demo.panoramica.ai/"
           >
-            See the demo
+            Try the demo
           </Link>
         </div>
       </div>
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="margin-top--lg">&nbsp;</div>
           <div className="margin-top--xl">
             <h1 className="center">
-              💁 Panoramica is a full-stack application
+              💁 Panoramica is also a full-stack application
             </h1>
             <div className="col col--6 col--offset-3 center">
               <p className="center">
@@ -90,6 +90,20 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <div class="row">
+            <div class="col col--12 center">
+              <picture>
+                <source
+                  srcset="/img/ss-demo-dark.svg"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <img
+                  src="/img/ss-demo.svg"
+                  alt="Screenshot of the Panoramica application UI"
+                />
+              </picture>
+            </div>
+          </div>
           <HomepageFeaturesGeneral />
           <div className="row">
             <div className="col col--12 center">
@@ -97,41 +111,39 @@ export default function Home() {
                 className="button button--primary button--lg"
                 to="https://demo.panoramica.ai/"
               >
-                💁 Try the Demo
+                💁 Try the demo
               </Link>
               <span>&nbsp;&nbsp;</span>
               <Link
                 className="button button--secondary button--lg"
                 to="/docs/category/user-guides"
               >
-                📖 Read the Guides
+                📖 Read user guides
               </Link>
             </div>
           </div>
 
           <div className="margin-top--lg">&nbsp;</div>
-          <div
-            id="request-access"
-            className="row margin-top--xl margin-bottom--xl"
-          >
-            <div className="card col col--6 col--offset-3 center">
+          <div className="margin-top--xl">&nbsp;</div>
+          <div id="request-access" className="row">
+            <div className="card col col--6 col--offset-3 center shadow--md padding--lg">
               <div class="card__header">
                 <h2>Orbit User? Try a Hosted Version</h2>
               </div>
               <div class="card__body">
                 <p>
                   If you'd like to try Panormica with your existing Orbit
-                  workspace, fill out this form and we'll reach out to enable it
-                  for you.
+                  workspace, fill out this form and we'll enable it for you.
                 </p>
                 <form
+                  className="form"
                   action="https://app.orbit.love/submissions/59d63df6-a7a0-4770-81fe-0f6f2b43deba"
                   method="POST"
                 >
                   <label name="email">✉️ Your email address</label>
                   <input type="text" id="application-email" name="email" />
                   <button
-                    className="button button--primary button--lg"
+                    className="button button--secondary button--lg"
                     type="submit"
                   >
                     Email me
@@ -142,6 +154,7 @@ export default function Home() {
             </div>
             <div className="margin-top--lg">&nbsp;</div>
           </div>
+          <div className="margin-top--xl">&nbsp;</div>
         </main>
       </div>
     </Layout>

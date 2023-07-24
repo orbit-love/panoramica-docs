@@ -38,8 +38,8 @@ function SignupForm() {
 
   return (
     <div className="col col--8 col--offset-2 center">
-      <h2 className="subhead">Signup for the hosted version</h2>
-      <h3>If you'd like to try Panormica with your existing Orbit workspace, fill out this form and we'll reach out to enable it for you.</h3>
+      <h2 className="subhead">Sign up for the hosted version</h2>
+      <h3 className="margin-horiz--lg">If you'd like to try Panormica with your existing Orbit workspace, fill out this form and we'll reach out to enable it for you.</h3>
       <form onSubmit={handleSubmit} className="center">
         <label htmlFor="application-email">
         ✉️ Your email address
