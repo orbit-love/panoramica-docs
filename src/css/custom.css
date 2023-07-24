@@ -149,7 +149,7 @@ form .button.button--secondary:hover {
   background-image: url(../../static/img/ss-demo.svg);
 }
 
-@media (prefers-color-scheme: dark) {
+.dark #screenshot-main {
   #screenshot-main {
     background-image: url(../../static/img/ss-demo-dark.svg);
   }

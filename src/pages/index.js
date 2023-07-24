@@ -9,6 +9,7 @@ import HomepageFeaturesDev from "@site/src/components/HomepageFeaturesDev";
 import styles from "./index.module.css";
 import SignupForm from "../components/SignupForm";
 
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -49,7 +50,7 @@ export default function Home() {
         <main>
           <div className="margin-top--xl">
             <h1 className="text-xl center">🧰 What does Panoramica do?</h1>
-            <div className="col col--6 col--offset-3 center">
+            <div className="col col--8 col--offset-2 center">
               <p className="center">
                 Panoramica helps developers{" "}
                 <strong>
@@ -77,7 +78,7 @@ export default function Home() {
             <h1 className="center">
               💁 Panoramica is also a full-stack application
             </h1>
-            <div className="col col--6 col--offset-3 center">
+            <div className="col col--8 col--offset-2 center">
               <p className="center">
                 Before you can analyze or get help with a conversation, you need
                 to know it exists. In noisy places like large communities, this
