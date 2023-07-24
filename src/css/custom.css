@@ -120,3 +120,13 @@ form .button.button--secondary:hover {
   background: rgb(97,25,94);
   background: linear-gradient(43deg, rgba(97,25,94,1) 0%, rgba(203,88,100,1) 35%, rgba(252,176,69,1) 100%);  box-shadow: 0px 0px 10px 0px rgba(252,176,69, 0.3);
 }
+
+#screenshot-main {
+  background-image: url(../../static/img/ss-demo.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+  #screenshot-main {
+    background-image: url(../../static/img/ss-demo-dark.svg);
+  }
+}

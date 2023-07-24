@@ -51,6 +51,22 @@ export default function Home() {
       <HomepageHeader />
       <div class="container">
         <main>
+          <div class="row">
+            <div class="col col--12 center">
+            <picture>
+              <source
+                srcset="/img/ss-demo-dark.svg"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img
+                src="/img/ss-demo.svg"
+                alt="Screenshot of the Panoramica application UI"
+              />
+            </picture>
+              
+            </div>
+          </div>
+
           <HomepageFeaturesGeneral />
           <h2 className="subhead">🧰 Build with Panoramica</h2>
           <HomepageFeaturesDev />
