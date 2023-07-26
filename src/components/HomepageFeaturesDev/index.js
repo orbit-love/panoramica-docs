@@ -35,7 +35,7 @@ const FeatureList = [
       <>
         Panoramica finds and formats the data so that an AI assistant can
         correctly assist users with a wide variety of questions and tasks. Based
-        on the user's request, the right data is retrieved from vector and graph
+        on the user&#39;s request, the right data is retrieved from vector and graph
         databases.
       </>
     ),
