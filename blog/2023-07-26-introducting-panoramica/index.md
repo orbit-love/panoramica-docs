@@ -101,8 +101,9 @@ beyond the boundaries of who we serve today, and yet still create tons of new op
 for our core audience - the community builders that are the reason we exist.
 
 For an open source project to make sense, in comparison to a closed-source option, it
-needs to have the potential to be much larger because it is open source. I see that
-potential with Panoramica because conversations are everywhere and everyone—community builder or not—finds themselves in tens if not hundreds of them every day. There's no doubt in my mind that
+needs to have the potential to be much larger because it is open source. Otherwise it
+doesn't make a lot of sense. I see that
+potential here with Panoramica because conversations are everywhere and everyone—community builder or not—finds themselves in tens if not hundreds of them every day. There's no doubt in my mind that
 better tools, and in particular LLMs, could help people have better conversations
 that also consume less time and effort. I can't think of how much time I could have saved
 over the years, or better outcomes I could have created, by having an AI assistant in my
