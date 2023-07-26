@@ -164,7 +164,8 @@ form .button.button--secondary:hover {
   line-height: 2.2rem;
 }
 
-[itemprop="blogPost"] ul {
+[itemprop="blogPost"]
+ul {
   font-size: 1.2rem;
   line-height: 2.2rem;
 }
