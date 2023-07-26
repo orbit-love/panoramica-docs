@@ -14,18 +14,18 @@ groups, or large panoramas like online communities or social networks.
 ## Why did we build Panoramica?
 
 **Josh**: At [Orbit](https://orbit.love/), most of the data we work with is conversational.
-Our most popular integrations are to community platforms and social networks.
+Our most popular [integrations](https://orbit.love/integrations) are to community platforms and social networks.
 Both varieties of community platform—chat and forum—are conversational in nature.
 Even GitHub is conversational - conversations happen on issues, pull requests, pull
 request reviews, and of course GitHub Discussions. Not all community data is
 conversational, but most of it is.
 
-As community builders, we know how important conversations are. They are the conduit through which connections are made, information is shared, and work is done. Back in April, I
+As community builders, we know how important conversations are. They are the conduit through which connections are made, information is shared, and work is done. Back in April, **I
 started to explore ways that Orbit could bring more insights to users by looking
-at the conversation level vs. single activities. At the same time, I started looking
+at the conversation level vs. single activities**. At the same time, I started looking
 at how Orbit could help our users leverage AI and the rapid advancement of LLMs in
-the context of community building. Since many LLMs are optimized for conversations _with
-humans_, I thought they might also be very good at analyzing conversations _between humans_.
+the context of community building. **Since many LLMs are optimized for conversations _with
+humans_, I thought they might also be very good at analyzing conversations _between humans_**.
 
 Together, these two investigations led to Panoramica. As I got underway with "conversationalizing"
 Orbit's data, I saw first-hand how tricky it could be. Orbit has integrations to dozens
@@ -68,16 +68,15 @@ This makes it really easy to get all members, entities, mentions, replies, etc. 
 I could go on about graph queries for hours, so let me get back to the big picture.
 I did the work to transform Orbit activities into this kind of a conversation
 graph. Everything except reactions, which was too much scope for now. The result was
-really compelling. Being able to see the visual graph of conversations in a community
-helped me see all kinds of patterns about the Orbit community I hadn't noticed before.
+really compelling. **Being able to see the visual graph of conversations in a community
+helped me see all kinds of patterns about the Orbit community I hadn't noticed before**.
 I knew I wanted to get this in the hands of our users and customers soon.
 
-Of course, staring at a screenful of nodes and edges isn't for everyone, so at this
-point I started to look at how AI could allow end users to get these insights
+Of course, staring at a screenful of nodes and edges isn't for everyone, so I started to look at how AI could allow end users to get these insights
 without actually knowing or caring that there's a graph involved. At this point, one of Orbit's
-most senior engineers, Steeve Bete, got involved in the project. Steeve had been
-doing some AI explorations of his own and had ideas about how to engineer prompts that would
-allow end users to ask simple questions and still get the right answers. Questions like:
+most senior engineers, **Steeve Bete**, got involved in the project. 
+
+Steeve had been doing some AI explorations of his own and had ideas about how to engineer prompts that would allow end users to ask simple questions and still get the right answers. Questions like:
 
 - Who in our community knows the most about Python?
 - What are the most popular websites that our members share?
@@ -122,7 +121,7 @@ Starting from today, we'd love to start getting feedback from developers and
 end users about both the developer experience and user experience.
 
 On the user side,
-any Orbit user (including new ones!) can [email us](mailto:josh@orbit.love) to get access to a Panoramica instance hosted by Orbit. Once users have access, they can create a project and
+**any Orbit user (including new ones!) can [complete this form](https://panoramica.ai/#request-access) to get access to a Panoramica instance hosted by Orbit**. Once users have access, they can create a project and
 connect their Orbit workspace. For AI-powered features, users have the choice to use their own API keys for the LLM + Vector DBs we support out of the box (OpenAI and Pinecone) or use keys that
 we provide by default.
 
@@ -138,7 +137,7 @@ so we also want to add support for other conversational data sources directly. I
 a data source you'd like to use with Panoramica, please [reach out](mailto:josh@orbit.love)
 and let's talk about how we can support it! 🙏
 
-We are also interested in contributions in the following areas:
+**We are also interested in contributions in the following areas:**
 
 - Support for more LLMs and Vector DBs via [LangChain](https://js.langchain.com/docs/get_started/introduction/)
 - New UI [widgets](/docs/category/widget-library)
