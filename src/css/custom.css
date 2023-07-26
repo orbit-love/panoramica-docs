@@ -159,7 +159,12 @@ form .button.button--secondary:hover {
   }
 }
 
-div[itemprop="articleBody"] p, ul {
+[itemprop="blogPost"] p {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+}
+
+[itemprop="blogPost"] ul {
   font-size: 1.2rem;
   line-height: 2.2rem;
 }
