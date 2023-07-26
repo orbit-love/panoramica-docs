@@ -40,12 +40,12 @@ function HomepageHeader() {
           >
             Read the docs
           </Link>
-          <Link
+          {/* <Link
             className="button button--secondary button--lg margin-horiz--md"
             to="https://demo.panoramica.ai/"
           >
             Try the demo
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>
@@ -109,7 +109,7 @@ export default function Home() {
             <div className="col col--12 center">
               <picture>
                 <source
-                  srcset="/img/ss-demo-dark.svg"
+                  srcSet="/img/ss-demo-dark.svg"
                   media="(prefers-color-scheme: dark)"
                 />
                 <img
@@ -122,12 +122,12 @@ export default function Home() {
           <HomepageFeaturesGeneral />
           <div className="row">
             <div className="col col--12 center">
-              <Link
+              {/* <Link
                 className="button button--primary button--lg"
                 to="https://demo.panoramica.ai/"
               >
                 💁 Try the demo
-              </Link>
+              </Link> */}
               <span>&nbsp;&nbsp;</span>
               <Link
                 className="button button--secondary button--lg"
