@@ -98,7 +98,7 @@ to users from within our existing (closed source) application or should we do so
 different? From early on, I felt like we were creating something of value that
 could be relevant for many new kinds of developers and end users,
 beyond the boundaries of who we serve today, and yet still create tons of new opportunities
-for our code audience - the community builders that are the reason we exist.
+for our core audience - the community builders that are the reason we exist.
 
 For an open source project to make sense, in comparison to a closed-source option, it
 needs to have the potential to be much larger because it is open source. I see that
