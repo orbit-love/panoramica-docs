@@ -60,6 +60,31 @@ export default function Home() {
       description={`Website and documentation of the ${siteConfig.title} project`}
     >
       <HomepageHeader />
+      <div
+        scrollAmount="10"
+        hspace="50"
+        className="marquee margin-top--lg padding-vert--md"
+        style={{ backgroundColor: "rgba(247, 216, 43, 0.3)" }}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "baseline",
+          }}
+        >
+          <h2 style={{}} className="padding-top--md margin-horiz--md">
+            📣 Introducing Panoramica
+          </h2>
+          <p style={{ marginBottom: "0" }}>July 26, 2023</p>
+          <Link
+            className="button button--primary button--md margin-horiz--lg"
+            to="blog/introducing-panoramica"
+          >
+            Read the blog post
+          </Link>
+        </div>
+      </div>
       <div className="container">
         <main>
           <div className="margin-top--xl">
