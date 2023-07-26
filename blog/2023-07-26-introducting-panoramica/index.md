@@ -74,7 +74,7 @@ I knew I wanted to get this in the hands of our users and customers soon.
 
 Of course, staring at a screenful of nodes and edges isn't for everyone, so I started to look at how AI could allow end users to get these insights
 without actually knowing or caring that there's a graph involved. At this point, one of Orbit's
-most senior engineers, **Steeve Bete**, got involved in the project. 
+most senior engineers, **Steeve Bete**, got involved in the project.
 
 Steeve had been doing some AI explorations of his own and had ideas about how to engineer prompts that would allow end users to ask simple questions and still get the right answers. Questions like:
 

@@ -100,6 +100,17 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <div className="margin-top--lg">&nbsp;</div>
+          <div className="row">
+            <div className="col col--8 col--offset-2">
+              <picture>
+                <img
+                  src="/img/graph.png"
+                  alt="A graph of a conversation with nodes and edges"
+                />
+              </picture>
+            </div>
+          </div>
           <HomepageFeaturesDev />
           <div className="row">
             <div className="col col--12 center">
