@@ -13,7 +13,7 @@ groups, or large panoramas like online communities or social networks.
 
 ## Why did we build Panoramica?
 
-**Josh**: At Orbit, most of the data we work with is conversational.
+**Josh**: At [Orbit](https://orbit.love/), most of the data we work with is conversational.
 Our most popular integrations are to community platforms and social networks.
 Both varieties of community platform—chat and forum—are conversational in nature.
 Even GitHub is conversational - conversations happen on issues, pull requests, pull
@@ -141,12 +141,12 @@ and let's talk about how we can support it! 🙏
 We are also interested in contributions in the following areas:
 
 - Support for more LLMs and Vector DBs via [LangChain](https://js.langchain.com/docs/get_started/introduction/)
-- New UI [widgets](/docs/user-guides/widget-library)
-- More [themes](/docs/developer-guides/themes)
+- New UI [widgets](/docs/category/widget-library)
+- More [themes](/docs/developer-guides/custom-themes)
 - TypeScript and codebase design
 - Graph data science and algorithms
-- Improving the [developer guides](/docs/developer-guides/)
-- Improving the [user guides](/docs/user-guides/)
+- Improving the [developer guides](/docs/category/developer-guides/)
+- Improving the [user guides](/docs/category/user-guides/)
 - Adding more data sources 😋
 
 If you're interested in contributing, using, or just staying up to date with the project,
