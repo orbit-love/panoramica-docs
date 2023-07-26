@@ -67,6 +67,10 @@
   );
 }
 
+.hero .hero__subtitle a {
+  color: inherit !important;
+}
+
 .hero .button--secondary {
   background: rgb(154, 168, 201);
   background: linear-gradient(

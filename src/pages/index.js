@@ -9,7 +9,6 @@ import HomepageFeaturesDev from "@site/src/components/HomepageFeaturesDev";
 import styles from "./index.module.css";
 import SignupForm from "../components/SignupForm";
 
-
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -17,7 +16,22 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.tagline}</h1>
         <p className="hero__subtitle margin-bottom--lg">
-          Built on Next.js, LangChain, Memgraph, and Orbit
+          Built with{" "}
+          <a target="_blank" href="https://nextjs.org/">
+            Next.js
+          </a>
+          ,{" "}
+          <a target="_blank" href="https://langchain.com/">
+            LangChain
+          </a>
+          ,{" "}
+          <a target="_blank" href="https://memgraph.com/">
+            Memgraph
+          </a>
+          , and{" "}
+          <a target="_blank" href="https://orbit.love/">
+            Orbit
+          </a>
         </p>
         <div className={styles.buttons}>
           <Link
@@ -91,8 +105,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div class="row">
-            <div class="col col--12 center">
+          <div className="row">
+            <div className="col col--12 center">
               <picture>
                 <source
                   srcset="/img/ss-demo-dark.svg"
@@ -128,10 +142,10 @@ export default function Home() {
           <div className="margin-top--xl">&nbsp;</div>
           <div id="request-access" className="row">
             <div className="card col col--6 col--offset-3 center shadow--md padding--lg">
-              <div class="card__header">
+              <div className="card__header">
                 <h2>Orbit User? Try a Hosted Version</h2>
               </div>
-              <div class="card__body">
+              <div className="card__body">
                 <p>
                   If you'd like to try Panormica with your existing Orbit
                   workspace, fill out this form and we'll enable it for you.
