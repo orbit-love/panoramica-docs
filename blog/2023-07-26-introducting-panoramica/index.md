@@ -117,3 +117,42 @@ improved, extended, and forked in order to create conversational AI experiences
 fast for a huge number of use cases that we can't predict today.
 
 ## What happens next?
+
+Starting from today, we'd love to start getting feedback from developers and
+end users about both the developer experience and user experience.
+
+On the user side,
+any Orbit user (including new ones!) can [email us](mailto:josh@orbit.love) to get access to a Panoramica instance hosted by Orbit. Once users have access, they can create a project and
+connect their Orbit workspace. For AI-powered features, users have the choice to use their own API keys for the LLM + Vector DBs we support out of the box (OpenAI and Pinecone) or use keys that
+we provide by default.
+
+On the developer side, we are interested in increasing the number of data sources
+that Panoramica supports. Right now, out-of-the-box support is provided for connecting to
+an Orbit workspace via the Orbit API and retrieving activities. These activities are then
+used to create the conversation graph. Right now, we have support in Panoramica for activities
+from Discord, Discourse, Twitter (err.. X?), and GitHub, and we'll be adding Slack and others
+shortly.
+
+It's important to us that Panoramica does not only support Orbit out-of-the-box,
+so we also want to add support for other conversational data sources directly. If you have
+a data source you'd like to use with Panoramica, please [reach out](mailto:josh@orbit.love)
+and let's talk about how we can support it! 🙏
+
+We are also interested in contributions in the following areas:
+
+- Support for more LLMs and Vector DBs via [LangChain](https://js.langchain.com/docs/get_started/introduction/)
+- New UI [widgets](/docs/user-guides/widget-library)
+- More [themes](/docs/developer-guides/themes)
+- TypeScript and codebase design
+- Graph data science and algorithms
+- Improving the [developer guides](/docs/developer-guides/)
+- Improving the [user guides](/docs/user-guides/)
+- Adding more data sources 😋
+
+If you're interested in contributing, using, or just staying up to date with the project,
+send us an [email](mailto:josh@orbit.love) and we'll follow up. Watch this space for updates
+in August and September as we work toward our next milestone, focused on user productivity
+with the AI and expanding the set of questions that can be answered about conversations and
+communities.
+
+Until then, have a good summer! 😎
