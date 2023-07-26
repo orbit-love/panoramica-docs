@@ -158,3 +158,8 @@ form .button.button--secondary:hover {
     background-image: url(../../static/img/ss-demo-dark.svg);
   }
 }
+
+div[itemprop="articleBody"] p, ul {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+}
