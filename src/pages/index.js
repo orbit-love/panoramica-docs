@@ -121,6 +121,17 @@ export default function Home() {
       <Banner />
       <div className="container">
         <main>
+        <div className="row margin-top--lg">
+            <div className="col col--12 center">
+              <ThemedImage
+                alt="Screenshot of the Panoramica application UI"
+                sources={{
+                  light: "/img/ss-demo.svg",
+                  dark: "/img/ss-demo-dark.svg",
+                }}
+              />
+            </div>
+          </div>
           <div className="margin-top--xl">
             <h1 className="text-xl center">🧰 What does Panoramica do?</h1>
             <div className="col col--8 col--offset-2 center">
@@ -151,7 +162,7 @@ export default function Home() {
           <div className="margin-top--lg">&nbsp;</div>
           <div className="margin-top--xl">
             <h1 className="center">
-              💁 Panoramica is also a full-stack application
+              💁 Panoramica is a full-stack application
             </h1>
             <div className="col col--8 col--offset-2 center">
               <p className="center">
@@ -164,17 +175,6 @@ export default function Home() {
                   getting help from AI assistants.
                 </strong>
               </p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col col--12 center">
-              <ThemedImage
-                alt="Screenshot of the Panoramica application UI"
-                sources={{
-                  light: "/img/ss-demo.svg",
-                  dark: "/img/ss-demo-dark.svg",
-                }}
-              />
             </div>
           </div>
           <HomepageFeaturesGeneral />
