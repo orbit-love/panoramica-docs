@@ -191,7 +191,7 @@ export default function Home() {
                 className="button button--secondary button--lg"
                 to="/docs/category/user-guides"
               >
-                📖 Read user guides
+                📖 Read the user guides
               </Link>
             </div>
           </div>

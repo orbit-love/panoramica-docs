@@ -5,11 +5,21 @@ authors: [dzello, steeve]
 tags: [panoramica]
 ---
 
-Today we are very excited to share a new project with you called
+import ThemedImage from "@theme/ThemedImage";
+
+Today we are very excited to share a new open source project with you called
 Panoramica. Panoramica makes it easy for developers to
 work with conversational data, one of the most prevalent kinds on
 the internet. In particular, Panoramica helps leverage AI and Large Language Models (LLMs) in the context of single conversations,
 groups, or large panoramas like online communities or social networks.
+
+<div className="margin-vert--lg center">
+  <ThemedImage
+    alt="Panoramica conversation graph"
+    sources={{ light: "/img/ss-demo.svg", dark: "/img/ss-demo-dark.svg" }}
+    style={{}}
+  />
+</div>
 
 ## Why did we build Panoramica?
 
@@ -19,6 +29,14 @@ Both varieties of community platform—chat and forum—are conversational in na
 Even GitHub is conversational - conversations happen on issues, pull requests, pull
 request reviews, and of course GitHub Discussions. Not all community data is
 conversational, but most of it is.
+
+<div className="margin-vert--lg center">
+  <ThemedImage
+    alt="Panoramica conversation graph"
+    sources={{ light: "/img/graph-light.png", dark: "/img/graph-dark.png" }}
+    style={{ maxWidth: "500px" }}
+  />
+</div>
 
 As community builders, we know how important conversations are. They are the conduit through which connections are made, information is shared, and work is done. Back in April, I
 started to explore ways that Orbit could bring more insights to users by looking
@@ -93,6 +111,17 @@ of Panoramica to you. It is certainly not complete, and not yet capable of answe
 every question you might have regarding your universe of conversations. But we think
 it's a decent start and that it could already help developers start to build
 AI experiences with conversational data.
+
+<div className="margin-vert--lg center">
+  <ThemedImage
+    alt="User and AI Assistant chatting"
+    sources={{
+      light: "/img/conversation-ai-chat-light.png",
+      dark: "/img/conversation-ai-chat-dark.png",
+    }}
+    style={{}}
+  />
+</div>
 
 ## Why is Panoramica open source?
 
