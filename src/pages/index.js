@@ -5,9 +5,9 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeaturesGeneral from "@site/src/components/HomepageFeaturesGeneral";
 import HomepageFeaturesDev from "@site/src/components/HomepageFeaturesDev";
+import ThemedImage from "@theme/ThemedImage";
 
 import styles from "./index.module.css";
-import SignupForm from "../components/SignupForm";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -103,12 +103,13 @@ export default function Home() {
           <div className="margin-top--lg">&nbsp;</div>
           <div className="row">
             <div className="col col--8 col--offset-2">
-              <picture>
-                <img
-                  src="/img/graph.png"
-                  alt="A graph of a conversation with nodes and edges"
-                />
-              </picture>
+              <ThemedImage
+                alt="Panoramica conversation graph"
+                sources={{
+                  light: "/img/graph-light.png",
+                  dark: "/img/graph-dark.png",
+                }}
+              />
             </div>
           </div>
           <HomepageFeaturesDev />
@@ -143,16 +144,13 @@ export default function Home() {
           </div>
           <div className="row">
             <div className="col col--12 center">
-              <picture>
-                <source
-                  srcSet="/img/ss-demo-dark.svg"
-                  media="(prefers-color-scheme: dark)"
-                />
-                <img
-                  src="/img/ss-demo.svg"
-                  alt="Screenshot of the Panoramica application UI"
-                />
-              </picture>
+              <ThemedImage
+                alt="Screenshot of the Panoramica application UI"
+                sources={{
+                  light: "/img/ss-demo.svg",
+                  dark: "/img/ss-demo-dark.svg",
+                }}
+              />
             </div>
           </div>
           <HomepageFeaturesGeneral />
