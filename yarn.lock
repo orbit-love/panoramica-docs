@@ -1474,7 +1474,7 @@
     react-json-view "^1.21.3"
     tslib "^2.4.0"
 
-"@docusaurus/plugin-google-analytics@2.4.1":
+"@docusaurus/plugin-google-analytics@^2.4.1", "@docusaurus/plugin-google-analytics@2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@docusaurus/plugin-google-analytics/-/plugin-google-analytics-2.4.1.tgz"
   integrity sha512-dyZJdJiCoL+rcfnm0RPkLt/o732HvLiEwmtoNzOoz9MSZz117UH2J6U2vUDtzUzwtFLIf32KkeyzisbwUCgcaQ==
