@@ -116,10 +116,7 @@ const Banner = () => (
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Docs`}
-      description={`Website and documentation of the ${siteConfig.title} project`}
-    >
+    <Layout title={`Home`} description={siteConfig.tagline}>
       <HomepageHeader />
       <Banner />
       <div className="container">
