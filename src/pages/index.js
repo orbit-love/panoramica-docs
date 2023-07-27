@@ -89,7 +89,7 @@ const Features = ({ featureList }) => {
 
 const Banner = () => (
   <div
-    className="margin-top--lg padding-vert--md"
+    className="padding-vert--md"
     style={{ backgroundColor: "rgba(247, 216, 43, 0.3)" }}
   >
     <div
