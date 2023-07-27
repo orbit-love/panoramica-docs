@@ -30,13 +30,13 @@ const FeatureList = [
     ),
   },
   {
-    title: "3. Constructs Smart Prompts",
+    title: "3. Equips an AI Assistant",
     description: (
       <>
         Panoramica finds and formats the data so that an AI assistant can
         correctly assist users with a wide variety of questions and tasks. Based
-        on the user&#39;s request, the right data is retrieved from vector and graph
-        databases.
+        on the user&#39;s request, the right data is retrieved from vector and
+        graph databases.
       </>
     ),
   },

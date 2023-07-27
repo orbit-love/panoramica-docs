@@ -102,12 +102,30 @@ export default function Home() {
           </div>
           <div className="margin-top--lg">&nbsp;</div>
           <div className="row">
-            <div className="col col--8 col--offset-2">
+            <div className="col col--4">
               <ThemedImage
                 alt="Panoramica conversation graph"
                 sources={{
-                  light: "/img/graph-light.png",
-                  dark: "/img/graph-dark.png",
+                  light: "/img/conversation-text-light.png",
+                  dark: "/img/conversation-text-dark.png",
+                }}
+              />
+            </div>
+            <div className="col col--4">
+              <ThemedImage
+                alt="Panoramica conversation graph"
+                sources={{
+                  light: "/img/conversation-graph-light.png",
+                  dark: "/img/conversation-graph-dark.png",
+                }}
+              />
+            </div>
+            <div className="col col--4">
+              <ThemedImage
+                alt="Panoramica conversation graph"
+                sources={{
+                  light: "/img/conversation-ai-chat-light.png",
+                  dark: "/img/conversation-ai-chat-dark.png",
                 }}
               />
             </div>

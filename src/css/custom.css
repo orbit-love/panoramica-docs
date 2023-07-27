@@ -159,7 +159,7 @@ form .button.button--secondary:hover {
   }
 }
 
-[itemprop="blogPost"] p:first-child {
+[itemprop="articleBody"] p:first-child {
   margin-top: 1.5rem;
 }
 [itemprop="blogPost"] p {
