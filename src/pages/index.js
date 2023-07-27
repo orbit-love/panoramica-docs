@@ -101,13 +101,14 @@ const Features = ({ featureList }) => {
 const Banner = () => (
   <div
     className="padding-vert--md"
-    style={{ backgroundColor: "rgba(247, 216, 43, 0.3)" }}
+    style={{ backgroundColor: "rgb(223 223 240 / 30%)" }}
   >
     <div
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "baseline",
+        fontWeight: "bold",
       }}
     >
       {/* }
@@ -117,10 +118,10 @@ const Banner = () => (
       <p style={{ marginBottom: "0" }}>July 26, 2023</p>
     { */}
       <Link
-        className="button button--primary button--md margin-horiz--lg"
+        className="margin-horiz--lg"
         to="blog/introducing-panoramica"
       >
-        Read the announcement
+        📖 Read the announcement post
       </Link>
     </div>
   </div>
