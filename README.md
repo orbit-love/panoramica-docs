@@ -2,4 +2,4 @@
 
 This repository contains the docs for Panoramica.
 
-Please visit [https://panoramica.ai/] to read the documentation and learn about the project.
+Please visit [https://panoramica.ai/](https://panoramica.ai/) to read the documentation and learn about the project.
