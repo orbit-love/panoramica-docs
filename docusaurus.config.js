@@ -38,13 +38,11 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
-      {
-        googleAnalytics: {
-          trackingID: 'G-DSD3K7XN15',
+        gtag: {
+          trackingID: "G-DSD3K7XN15",
           anonymizeIP: true,
         },
-      }
+      }),
     ],
   ],
 
