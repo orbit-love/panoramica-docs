@@ -145,6 +145,35 @@ export default function Home() {
               />
             </div>
           </div>
+          <div id="request-access" className="row">
+            <div className="card col col--6 col--offset-3 center shadow--md padding--lg">
+              <div className="card__header">
+                <h2>Orbit User? Try a Hosted Version</h2>
+              </div>
+              <div className="card__body">
+                <p>
+                  If you'd like to try Panormica with your existing Orbit
+                  workspace, fill out this form and we'll enable it for you.
+                </p>
+                <form
+                  className="form"
+                  action="https://app.orbit.love/submissions/59d63df6-a7a0-4770-81fe-0f6f2b43deba"
+                  method="POST"
+                >
+                  <label name="email">✉️ Your email address</label>
+                  <input type="text" id="application-email" name="email" />
+                  <button
+                    className="button button--secondary button--lg"
+                    type="submit"
+                  >
+                    Email me
+                  </button>
+                </form>
+              </div>
+              <div className="margin-top--lg">&nbsp;</div>
+            </div>
+            <div className="margin-top--lg">&nbsp;</div>
+          </div>
           <div className="margin-top--xl">
             <h1 className="text-xl center">🧰 What does Panoramica do?</h1>
             <div className="col col--8 col--offset-2 center">
@@ -203,44 +232,20 @@ export default function Home() {
               }
               <span>&nbsp;&nbsp;</span>
               <Link
-                className="button button--secondary button--lg"
+                className="button button--secondary button--lg margin--md"
                 to="/docs/category/user-guides"
               >
                 📖 Read the user guides
               </Link>
-            </div>
-          </div>
+              <span>&nbsp;&nbsp;</span>
+              <Link
+                className="button button--secondary button--lg"
+                to="#request-access"
+              >
+                ✅ Signup for access
+              </Link>
 
-          <div className="margin-top--lg">&nbsp;</div>
-          <div className="margin-top--xl">&nbsp;</div>
-          <div id="request-access" className="row">
-            <div className="card col col--6 col--offset-3 center shadow--md padding--lg">
-              <div className="card__header">
-                <h2>Orbit User? Try a Hosted Version</h2>
-              </div>
-              <div className="card__body">
-                <p>
-                  If you'd like to try Panormica with your existing Orbit
-                  workspace, fill out this form and we'll enable it for you.
-                </p>
-                <form
-                  className="form"
-                  action="https://app.orbit.love/submissions/59d63df6-a7a0-4770-81fe-0f6f2b43deba"
-                  method="POST"
-                >
-                  <label name="email">✉️ Your email address</label>
-                  <input type="text" id="application-email" name="email" />
-                  <button
-                    className="button button--secondary button--lg"
-                    type="submit"
-                  >
-                    Email me
-                  </button>
-                </form>
-              </div>
-              <div className="margin-top--lg">&nbsp;</div>
             </div>
-            <div className="margin-top--lg">&nbsp;</div>
           </div>
           <div className="margin-top--xl">&nbsp;</div>
         </main>
