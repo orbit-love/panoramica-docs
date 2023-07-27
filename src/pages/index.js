@@ -60,7 +60,7 @@ const SideBySide = ({ title, description, alt, imageLight, imageDark }) => (
       <h2 className="text-xl">{title}</h2>
       <p>{description}</p>
     </div>
-    <div className="col col--6 left">
+    <div className="col col--6">
       <ThemedImage
         alt={alt}
         sources={{
@@ -99,15 +99,17 @@ const Banner = () => (
         alignItems: "baseline",
       }}
     >
+      { /* }
       <h2 style={{}} className="padding-top--md margin-horiz--md">
         📣 Introducing Panoramica
       </h2>
-      <p style={{ marginBottom: "0" }}>July 26, 2023</p>
+      <p style={{ marginBottom: "0" }}>July 26, 2023</p> 
+    { */ }
       <Link
         className="button button--primary button--md margin-horiz--lg"
         to="blog/introducing-panoramica"
       >
-        Read the blog post
+        Read the announcement
       </Link>
     </div>
   </div>
@@ -181,7 +183,7 @@ export default function Home() {
           <div className="row">
             <div className="col col--12 center">
               { <Link
-                className="button button--primary button--lg"
+                className="button button--primary button--lg margin--md"
                 to="https://demo.panoramica.ai/"
               >
                 💁 Try the demo
