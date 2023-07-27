@@ -181,7 +181,7 @@ export default function Home() {
           <div className="row">
             <div className="col col--12 center">
               { <Link
-                className="button button--primary button--lg"
+                className="button button--primary button--lg margin--md"
                 to="https://demo.panoramica.ai/"
               >
                 💁 Try the demo
