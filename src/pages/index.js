@@ -4,8 +4,9 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeaturesGeneral from "@site/src/components/HomepageFeaturesGeneral";
-import HomepageFeaturesDev from "@site/src/components/HomepageFeaturesDev";
 import ThemedImage from "@theme/ThemedImage";
+
+import devFeatureList from "@site/src/components/dev/featureList";
 
 import styles from "./index.module.css";
 
@@ -52,6 +53,66 @@ function HomepageHeader() {
   );
 }
 
+const SideBySide = ({ title, description, alt, imageLight, imageDark }) => (
+  <div className="row margin-vert--md">
+    <div className="col col--6">
+      <div className="margin-top--lg">&nbsp;</div>
+      <h2 className="text-xl">{title}</h2>
+      <p>{description}</p>
+    </div>
+    <div className="col col--6 center">
+      <ThemedImage
+        alt={alt}
+        sources={{
+          light: imageLight,
+          dark: imageDark,
+        }}
+        style={{ maxWidth: "475px" }}
+      />
+    </div>
+  </div>
+);
+
+const Features = ({ featureList }) => {
+  return (
+    <section className={styles.features}>
+      <div className="container">
+        <div className="row">
+          {featureList.map((props, idx) => (
+            <SideBySide key={idx} {...props} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Banner = () => (
+  <div
+    className="margin-top--lg padding-vert--md"
+    style={{ backgroundColor: "rgba(247, 216, 43, 0.3)" }}
+  >
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "baseline",
+      }}
+    >
+      <h2 style={{}} className="padding-top--md margin-horiz--md">
+        📣 Introducing Panoramica
+      </h2>
+      <p style={{ marginBottom: "0" }}>July 26, 2023</p>
+      <Link
+        className="button button--primary button--md margin-horiz--lg"
+        to="blog/introducing-panoramica"
+      >
+        Read the blog post
+      </Link>
+    </div>
+  </div>
+);
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -60,31 +121,7 @@ export default function Home() {
       description={`Website and documentation of the ${siteConfig.title} project`}
     >
       <HomepageHeader />
-      <div
-        scrollAmount="10"
-        hspace="50"
-        className="marquee margin-top--lg padding-vert--md"
-        style={{ backgroundColor: "rgba(247, 216, 43, 0.3)" }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "baseline",
-          }}
-        >
-          <h2 style={{}} className="padding-top--md margin-horiz--md">
-            📣 Introducing Panoramica
-          </h2>
-          <p style={{ marginBottom: "0" }}>July 26, 2023</p>
-          <Link
-            className="button button--primary button--md margin-horiz--lg"
-            to="blog/introducing-panoramica"
-          >
-            Read the blog post
-          </Link>
-        </div>
-      </div>
+      <Banner />
       <div className="container">
         <main>
           <div className="margin-top--xl">
@@ -101,43 +138,15 @@ export default function Home() {
             </div>
           </div>
           <div className="margin-top--lg">&nbsp;</div>
-          <div className="row">
-            <div className="col col--4">
-              <ThemedImage
-                alt="Panoramica conversation graph"
-                sources={{
-                  light: "/img/conversation-text-light.png",
-                  dark: "/img/conversation-text-dark.png",
-                }}
-              />
-            </div>
-            <div className="col col--4">
-              <ThemedImage
-                alt="Panoramica conversation graph"
-                sources={{
-                  light: "/img/conversation-graph-light.png",
-                  dark: "/img/conversation-graph-dark.png",
-                }}
-              />
-            </div>
-            <div className="col col--4">
-              <ThemedImage
-                alt="Panoramica conversation graph"
-                sources={{
-                  light: "/img/conversation-ai-chat-light.png",
-                  dark: "/img/conversation-ai-chat-dark.png",
-                }}
-              />
-            </div>
-          </div>
-          <HomepageFeaturesDev />
+          <Features featureList={devFeatureList} />
+          <div className="margin-top--lg">&nbsp;</div>
           <div className="row">
             <div className="col col--12 center">
               <Link
-                className="button button--primary button--lg"
+                className="button button--secondary button--lg"
                 to="/docs/introduction"
               >
-                🧰 Learn more
+                💻 Read the developer guides
               </Link>
             </div>
           </div>
