@@ -1,0 +1,11 @@
+---
+sidebar_position: 6
+---
+
+# Configuration
+
+Configuration options available for Panoramica.
+
+## Suggested prompts
+
+These appear in different widgets.
