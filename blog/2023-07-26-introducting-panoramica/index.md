@@ -20,12 +20,12 @@ Even GitHub is conversational - conversations happen on issues, pull requests, p
 request reviews, and of course GitHub Discussions. Not all community data is
 conversational, but most of it is.
 
-As community builders, we know how important conversations are. They are the conduit through which connections are made, information is shared, and work is done. Back in April, **I
+As community builders, we know how important conversations are. They are the conduit through which connections are made, information is shared, and work is done. Back in April, I
 started to explore ways that Orbit could bring more insights to users by looking
-at the conversation level vs. single activities**. At the same time, I started looking
+at the conversation level vs. single activities. At the same time, I started looking
 at how Orbit could help our users leverage AI and the rapid advancement of LLMs in
-the context of community building. **Since many LLMs are optimized for conversations _with
-humans_, I thought they might also be very good at analyzing conversations _between humans_**.
+the context of community building. Since many LLMs are optimized for conversations _with
+humans_, I thought they might also be very good at analyzing conversations _between humans_.
 
 Together, these two investigations led to Panoramica. As I got underway with "conversationalizing"
 Orbit's data, I saw first-hand how tricky it could be. Orbit has integrations to dozens
@@ -33,6 +33,8 @@ of conversational platforms and each one works a different way. Some platforms h
 others have multiple levels of replies. Some platforms have channels, others have categories,
 others have more unique conversational boundaries, such as single issues or PRs on GitHub.
 Email is its own animal. There is no standard to work off of.
+
+### Creating a conversation graph
 
 Making it harder, when conversationalizing the data I wanted to account for a variety of
 things that I felt were important to understanding the whole conversation. These include:
@@ -72,6 +74,8 @@ really compelling. **Being able to see the visual graph of conversations in a co
 helped me see all kinds of patterns about the Orbit community I hadn't noticed before**.
 I knew I wanted to get this in the hands of our users and customers soon.
 
+### Adding AI to the mix
+
 Of course, staring at a screenful of nodes and edges isn't for everyone, so I started to look at how AI could allow end users to get these insights
 without actually knowing or caring that there's a graph involved. At this point, one of Orbit's
 most senior engineers, **Steeve Bete**, got involved in the project.
@@ -99,14 +103,11 @@ could be relevant for many new kinds of developers and end users,
 beyond the boundaries of who we serve today, and yet still create tons of new opportunities
 for our core audience - the community builders that are the reason we exist.
 
-For an open source project to make sense, in comparison to a closed-source option, it
-needs to have the potential to be much larger because it is open source. Otherwise it
-doesn't make a lot of sense. I see that
-potential here with Panoramica because conversations are everywhere and everyone—community builder or not—finds themselves in tens if not hundreds of them every day. There's no doubt in my mind that
-better tools, and in particular LLMs, could help people have better conversations
-that also consume less time and effort. I can't think of how much time I could have saved
-over the years, or better outcomes I could have created, by having an AI assistant in my
-chats that doesn't get tired, cranky, hangry, and also has, you know, knowledge of everything on the internet :D
+### The power of open source
+
+For an open source project to make sense in comparison to a closed-source option, it
+needs to have the potential to be much larger because it's packaged and delivered that way. Otherwise it doesn't make a lot of sense. I see that
+potential here with Panoramica because conversations are everywhere and everyone—community builder or not—finds themselves in tens or hundreds of them every day.
 
 It's now obvious that much of what many developers will be building in the coming years
 are ways to bring the power of AI into different contexts where it can benefit
@@ -131,6 +132,8 @@ an Orbit workspace via the Orbit API and retrieving activities. These activities
 used to create the conversation graph. Right now, we have support in Panoramica for activities
 from Discord, Discourse, Twitter (err.. X?), and GitHub, and we'll be adding Slack and others
 shortly.
+
+> **Developers: Don't miss the [introduction](/docs/introduction) to learn more about how Panoramica works.**
 
 It's important to us that Panoramica does not only support Orbit out-of-the-box,
 so we also want to add support for other conversational data sources directly. If you have

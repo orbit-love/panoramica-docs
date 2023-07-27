@@ -1,0 +1,116 @@
+---
+sidebar_position: 1
+---
+
+import ThemedImage from "@theme/ThemedImage";
+
+# Introduction
+
+Panoramica is an open-source project that makes it easier to handle, understand, and collaborate on conversational data with the help of AI.
+It includes a user interface where end users can monitor and save conversations from a variety of channels, then engage an AI
+assistant to help with common tasks like summarizing, extracting details, replying, and a lot more.
+
+## What is conversational data?
+
+**Conversational data** refers to any data representing an exchange of messages between individuals. It is one of the most prevalent formats on the internet, evident in email, chat, SMS, messaging platforms, forums, social networks, and online communities. Even on GitHub, conversational data emerges in issues, pull requests, reviews, and GitHub Discussions.
+
+### Conversational Data and AI
+
+The emergence of Large Language Models and chat-specific adaptations like ChatGPT have revolutionized our ability to analyze, understand, and facilitate conversations. The implications of improved conversations are extensive, benefiting individuals, businesses, and communities that create a context for these conversations.
+
+Panoramica's mission is to help users improve their conversations, from monitoring and analyzing them to crafting replies. The primary challenge today lies in extracting conversational data from the systems where the conversations occur and making it available to developers and users. This is where Panoramica steps in.
+
+## How Panoramica Works
+
+Panoramica revolves around three main operations:
+
+1. **Ingesting** conversational data
+2. **Transforming** data into a graph model
+3. **Serving** UI and AI experiences to users
+
+## Ingesting Data
+
+Panoramica has 2 ways to ingest data: via built-in connectors or the API.
+
+### Via Connectors
+
+Panoramica includes a connector to [Orbit](https://orbit.love/) that
+uses the [Orbit API](https://api.orbit.love/) to ingest data from sources like Discord, GitHub, Discourse, Twitter, and more.
+
+:::info
+
+Panoramica is created and maintained by the Orbit team. Hello! We intend to support Orbit as a data source and add connectors to other conversational data sources, tools, and platforms. If you're interested in adding a data source, please open an issue or PR on GitHub and let's chat. All contributors are welcome! :pray:
+
+:::
+
+### Via the API
+
+Panoramica also has an API endpoint for receiving activities from any source. Check out the [Import Data via API](/docs/developer-guides/import-data) guide to learn more.
+
+## Transforming Data
+
+As Panoramica receives data from connectors or the API, it is processed and stored in a graph format. We use the open-source [Memgraph](https://memgraph.com/) database to store conversations in graph format.
+
+### Graph data
+
+A graph database is useful because threaded conversations are inherently tree-like and can be easily represented as graphs. This setup eliminates the need for joins to reconstitute conversations, no matter their depth. A graph database also makes it easy to add additional nodes to each message or conversation, such as actors, mentions, and extracted entities.
+
+<div className="margin-vert--lg center">
+  <ThemedImage
+    alt="Panoramica conversation graph"
+    sources={{ light: "/img/graph-light.png", dark: "/img/graph-dark.png" }}
+    style={{ maxWidth: "500px" }}
+  />
+</div>
+
+With a graph database, we can quickly craft performant queries to answer questions like:
+
+- Which activities represent the start of a conversation? A reply? An isolated message?
+- Which conversation has the most replies?
+- Which conversation has the largest depth?
+- Which conversation involves the most unique actors?
+- Which actor has participated in the most conversations? As an originator? As a replier?
+
+We can also tap into the power of graph algorithms to answer questions like:
+
+- What's the shortest introduction path between two members?
+- What are the sub-communities within the community? Who are the bridges between them?
+- Who has the most reach or influence? (e.g. with Pagerank)
+
+All these queries, and many more, are straightforward and efficient, answering questions about individual conversations and the panorama of conversations stretching across a community.
+
+An additional advantage of property graph databases is their schemaless nature. This feature benefits Panoramica by allowing developers to add new properties or labels to parts of the graph without writing any migrations or schema code. Developers can also add entirely new types of nodes with minimal overhead.
+
+## Serving Experiences
+
+Once the data is loaded into the graph database, it is displayed in a UI built with [Next.js](https://nextjs.org/) and [React](https://reactjs.org/). It is also turned into
+embeddings and stored in a vector store for use by the AI assistant.
+
+### User Interface
+
+The Panoramica user interface is built upon the [Dockview](https://dockview.dev/) open source project. Dockview provides a lightweight window and tab management layer. It supports horizontal and vertical splitting, tab groups, and drag and drop. Additionally, it facilitates the serialization of the exact state of the interface, allowing us to persist changes across page views.
+
+The Panoramica UI serves several main purposes:
+
+- Assisting users in monitoring channels and discovering new or relevant conversations
+- Collaborating on those conversations with an AI assistant
+- Helping users explore historical trends, patterns, and related data
+
+<div className="margin-vert--lg center">
+  <ThemedImage
+    alt="Panoramica conversation graph"
+    sources={{ light: "/img/ss-demo.svg", dark: "/img/ss-demo-dark.svg" }}
+    style={{}}
+  />
+</div>
+
+### AI and LLMs
+
+Panoramica employs the [LangChain](https://langchain.com/) open source project to provide a wrapper around LLM-related functionality. LangChain facilitates easy integration of different components into the technology chain needed to provide AI experiences to users.
+
+Currently, Panoramica supports [OpenAI](https://openai.com/) for LLMs and [Pinecone](https://www.pinecone.io/) as a vector store out of the box. We aim to expand support for other models and stores over time using LangChain. Contributions are welcome!
+
+## Next Step: Get Started!
+
+Visit the Getting Started guide to see how you can set up Panoramica locally. Or if you're
+interested in learning how to use Panoramica, head over to the [user guides](/docs/category/user-guides).
