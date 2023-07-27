@@ -60,7 +60,7 @@ const SideBySide = ({ title, description, alt, imageLight, imageDark }) => (
       <h2 className="text-xl">{title}</h2>
       <p>{description}</p>
     </div>
-    <div className="col col--6 center">
+    <div className="col col--6 left">
       <ThemedImage
         alt={alt}
         sources={{
