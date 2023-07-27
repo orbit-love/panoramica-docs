@@ -51,6 +51,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {name: 'keywords', content: 'open source, AI, orbit'},
+        {name: 'twitter:card', content: './src/css/Preview Image - main.png'},
+        {name: 'og:image', content: './src/css/Preview Image - main.png'},
+      ],
       navbar: {
         title: "Panoramica",
         logo: {
