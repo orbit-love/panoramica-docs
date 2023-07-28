@@ -29,7 +29,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/orbit-love/panoramica-docs",
+          editUrl: "https://github.com/orbit-love/panoramica-docs/tree/main",
         },
         blog: {
           showReadingTime: true,
@@ -50,9 +50,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        {name: 'keywords', content: 'open source, AI, orbit'},
-        {name: 'twitter:card', content: '/img/preview-image-main.png'},
-        {name: 'og:image', content: '/img/preview-image-main.png'},
+        { name: "keywords", content: "open source, AI, orbit" },
+        { name: "twitter:card", content: "/img/preview-image-main.png" },
+        { name: "og:image", content: "/img/preview-image-main.png" },
       ],
       navbar: {
         title: "Panoramica",
