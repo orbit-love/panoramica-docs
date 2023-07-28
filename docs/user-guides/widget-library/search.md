@@ -1,3 +1,0 @@
-# Search
-
-Search for conversations.
