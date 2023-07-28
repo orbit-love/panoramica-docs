@@ -4,37 +4,11 @@ sidebar_position: 10
 
 # Contribute
 
-About contributing to the project.
+Panoramica is an open-source project. We welcome contributions from anyone who wants to get involved. Contributions can be in the form of code, documentation, design, and content.
+Open a [GitHub issue](https://github.com/orbit-love/panoramica/issues) if you'd like to
+discuss a feature, bug, or contribution you'd like to make.
 
-## Tech Stack
+## Areas of Contribution
 
-Here are some of the technologies that Panoramica is built on.
-
-### Core
-
-- Next.js
-- React
-- Tailwind
-- Prisma
-
-### Packages
-
-- Dockview
-- NextAuth
-- Remark
-- FontAwesome
-
-### Data
-
-- PostgreSQL
-- Memgraph
-
-### AI & LLMs
-
-- LangChain
-
-## Third-Party Services
-
-- Orbit
-- OpenAI
-- Pinecone
+See the [announcement blog post](/blog/introducing-panoramica) for a list of areas
+where we're actively looking for help with.
