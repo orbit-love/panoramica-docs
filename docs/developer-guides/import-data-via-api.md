@@ -25,7 +25,7 @@ For now, you'll need to provide `globalActor` and `globalActor` name in the acti
 Authentication is handled via a JWT token. You can generate a token in the User widget in the UI. This token is valid for 24 hours. Set the token in the `Authorization` header of the request.
 
 
-## HTTP Request Example
+## Example
 ```http
 POST /api/projects/<PROJECT_ID>/activities/batch_create HTTP/2
 Host: <YOUR_HOST>
@@ -86,7 +86,7 @@ Connection: close
       "timestampInt": 1691242065000,
       "url": "https://github.com/stardust/fastsearch/issues/112#issuecomment-1156971288",
       "textHtml": "<p>@karl I can help with that. I've worked with Rust's SipHasher, and it could be a good alternative.</p>"
-    },
+    }
   ]
 }
 ```
