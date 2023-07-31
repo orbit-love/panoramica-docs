@@ -169,6 +169,11 @@ form .button.button--secondary:hover {
   line-height: 2.2rem;
 }
 
+article p > img {
+  border: 1px solid;
+  border-color: #eee;
+}
+
 /** In mobile view, reduce the padding */
 @media screen and (max-width: 996px) {
   .side-by-side-image {
