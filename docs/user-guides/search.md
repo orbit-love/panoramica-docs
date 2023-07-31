@@ -22,3 +22,9 @@ The search is under development and does not produce good results
 for all queries yet. It is a semantic search and does not yet have the features to make it better at keyword search. YMMV. If you're interested in vector search and/or keyword search, we're looking for contributions in this area. There's so much potential for great conversation search!
 
 :::
+
+## Similar Conversations
+
+Panoramica helps you find conversations that are similar to others, based on the whole text of each conversation. To try it, find the **sparkly magic wand** icon in the toolbar that appears when you hover over a conversation. Click the magic wand and a widget will open that shows similar conversations.
+
+You can also find the sparkly magic wand at the top of the conversation widget 🪄
