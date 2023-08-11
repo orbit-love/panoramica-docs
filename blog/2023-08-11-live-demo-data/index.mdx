@@ -4,14 +4,22 @@ title: How we got data for the demo site
 authors: [steeve]
 tags: [panoramica]
 ---
-// import ThemedImage from "@theme/ThemedImage";
+
+import ThemedImage from "@theme/ThemedImage";
 
 We recently launched Panoramica, an open source project that makes it easy for developers to work with conversational data and AI.
 You can get a quick feel of how it works by visiting the [demo app](https://demo.panoramica.ai/projects/clkl72myr0000mk081rd0m45g)
 
-// Add a screenshot here of conversations from the demo site
-
 Here’s a secret: Every single conversation on this project is fake!
+
+<div className="margin-vert--lg center">
+  <ThemedImage
+    alt="Panoramica demo conversation"
+    sources={{ light: "/img/demo-site-conversation.png", dark: "/img/demo-site-conversation-dark.png" }}
+    style={{}}
+  />
+</div>
+
 We needed a way to get some data in for the world to see. It didn’t feel right or practical to use data from an existing community so we decided to manufacture them.
 
 Usually, for such an endeavor, one would use something like [Faker](https://fakerjs.dev/) to generate absolutely random entries.
