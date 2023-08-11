@@ -1,0 +1,137 @@
+---
+slug: introducing-panoramica
+title: How we got data for the demo site
+authors: [steeve]
+tags: [panoramica]
+---
+// import ThemedImage from "@theme/ThemedImage";
+
+We recently launched Panoramica, an open source project that makes it easy for developers to work with conversational data and AI.
+You can get a quick feel of how it works by visiting the [demo app](https://demo.panoramica.ai/projects/clkl72myr0000mk081rd0m45g)
+
+// Add a screenshot here of conversations from the demo site
+
+Here’s a secret: Every single conversation on this project is fake!
+We needed a way to get some data in for the world to see. It didn’t feel right or practical to use data from an existing community so we decided to manufacture them.
+
+Usually, for such an endeavor, one would use something like [Faker](https://fakerjs.dev/) to generate absolutely random entries.
+But while it works great when the main concern is the overall look and feel of the application, it wouldn’t cut it for our use case.
+
+The intrinsic meaning of the conversations, the vibrant interactions between members hold a ton of value that would be lost this way.
+That’s why I decided to use OpenAI’s GPT-4. Yes, I used AI to generate conversations that would be analyzed by AI 😅
+
+## How did I achieve it?
+
+I issued the following prompt.
+
+```
+I'm generating some data representing an online community. The community is about a tool similar to OpenSearch but faster because it is written in Rust.
+They mainly interact through Github issues and pull requests on 2 repositories: stardust/fastsearch and stardust/deploy-toolchains.
+
+Each activity is represented by a JSON with the following fields: actor, sourceId, sourceParentId, text, timestamp, timestampInt, actorName, url, mentions, source, sourceType, sourceChannel, globalActor, globalActorName
+
+Fictional Example:
+{ 
+  "actor": "molly-9",
+  "actorName": "Molly",
+  "globalActor": "molly-9",
+  "globalActorName": "Molly",
+  "mentions": [],
+  "source": "github",
+  "sourceChannel": "org/repo",
+  "sourceId": "org/repo#10-1506971245",
+  "sourceParentId": "org/repo#10",
+  "sourceType": "issue_comment_activity",
+  "text": "It should work by using the first module instead",
+  "timestamp": "2023-04-13T13:31:58.000Z",
+  "timestampInt": 1681392718000,
+  "url": "https://github.com/org/repo/issues/10#issuecomment-1506971245"
+}
+
+Notice that if an activity is a reply to another one, sourceParentId will match the parent's sourceId.
+The supported values for sourceType are: issue_activity, pull_request_activity, issue_comment_activity (issue comment activities can be replies to pull_request_activity)
+
+In the community there are 3 core members:
+actor: damo, name: Damo Ryan, description: CTO, has the vision locked in and can intervene for high level technical decisions.
+actor: sally-tech, name: Han Sally, Tech lead, extremely knowledgeable on the implementation details. Opinionated.
+actor: karl, name: Karl Oz, Junior dev, new to the team but can pick up things fast
+The rest are contributors (you can make them up as you go). They mostly raise issues but can help out with some PRs to scratch their own itch.
+
+Now answer with an array of roughly 10 JSONs representing the activities of the community. Around 3 conversations in total.
+Note that one pull_request_activity or issue_activity can have multiple replies. So start from the pull_request / issue_activity and generate 1 to 3 replies.
+Don't hesitate to include technical details to flesh out the text. Do not explain your work. Simply output the JSON.
+```
+
+Here’s the (truncated) output
+```jsonc
+[
+  {
+    "actor": "sally-tech",
+    "actorName": "Han Sally",
+    "globalActor": "sally-tech",
+    "globalActorName": "Han Sally",
+    "mentions": [],
+    "source": "github",
+    "sourceChannel": "stardust/fastsearch",
+    "sourceId": "stardust/fastsearch#112",
+    "sourceParentId": "",
+    "sourceType": "issue_activity",
+    "text": "I've noticed a slow response time when searching for larger data sets. I think it's related to the search algorithm.",
+    "timestamp": "2023-07-20T08:15:30.000Z",
+    "timestampInt": 1691238930000,
+    "url": "https://github.com/stardust/fastsearch/issues/112"
+  },
+  {
+    "actor": "karl",
+    "actorName": "Karl Oz",
+    "globalActor": "karl",
+    "globalActorName": "Karl Oz",
+    "mentions": ["sally-tech"],
+    "source": "github",
+    "sourceChannel": "stardust/fastsearch",
+    "sourceId": "stardust/fastsearch#112-1156971255",
+    "sourceParentId": "stardust/fastsearch#112",
+    "sourceType": "issue_comment_activity",
+    "text": "I've made a profiling and it seems like the hashing function is taking the most time. Maybe we should look into more efficient hash functions?",
+    "timestamp": "2023-07-20T08:58:00.000Z",
+    "timestampInt": 1691241480000,
+    "url": "https://github.com/stardust/fastsearch/issues/112#issuecomment-1156971255"
+  },
+  // ...
+  {
+    "actor": "karl",
+    "actorName": "Karl Oz",
+    "globalActor": "karl",
+    "globalActorName": "Karl Oz",
+    "mentions": ["sally-tech"],
+    "source": "github",
+    "sourceChannel": "stardust/fastsearch",
+    "sourceId": "stardust/fastsearch#115-1256971290",
+    "sourceParentId": "stardust/fastsearch#115",
+    "sourceType": "issue_comment_activity",
+    "text": "@sally-tech, I'd be happy to help with that. I think I know a potential solution for this.",
+    "timestamp": "2023-07-22T12:15:00.000Z",
+    "timestampInt": 1691373300000,
+    "url": "https://github.com/stardust/fastsearch/issues/115#issuecomment-1256971290"
+  }
+]
+```
+
+As you can see, I started by setting up a well constrained scene. I communicated the data format I was looking for and the relationship between each entry.
+I also added some core members to give the AI something to work from. Then I let GPT-4 do its magic. To be honest, it worked even better than expected.
+
+### Adding more data
+I simply asked for more data incrementally:
+
+```
+Good. Now I want a conversation around an issue raised by Dave, where Sally and Damo worked together to figure out the issue. In the end, Dave and another contributor are happy about the answers.
+```
+
+### Using the data
+I did something similar to generate Discord Conversations in a separate chat.
+Then, it was only a matter of grabbing the Generated JSON, combining them together, cleaning up the actor names and dates where it made sense.
+Once I had the data it was easy to push them up to the demo instance using [Panoramica’s API](https://panoramica.ai/docs/developer-guides/import-data-via-api).
+
+
+## Is this article AI generated as well?
+Guess.
