@@ -27,7 +27,7 @@ But here’s a secret: Every single conversation on this project is fake!
 
 We needed a way to get some data in for the world to see. We could have used public data from GitHub or Twitter, but that would have required finding the right subset to make a good demo, plus the work to gather and maintain the data. It didn't feel right or practical, that's why we opted to manufacture the data.
 
-## How Faker fell short for us
+## Faking an online community requires an intelligent tool
 
 Usually, for such an endeavor, one would use something like [Faker](https://fakerjs.dev/) to generate random entries. Faker is pretty great at generating realistic sounding sentences. But let see if we can obtain a conversation this way. With the hacker jargon, we get:
 
@@ -40,7 +40,7 @@ Damo: Bypassing the card won't do anything, we need to generate the mobile json 
 
 Can you spot the issue? Each message sounds realistic but this is NOT a conversation. It's completely off and spineless.
 
-Faker works great when the main concern is the overall look and feel of the application, but it wouldn’t cut it for our use case. The intrinsic meaning of the conversations, the topics, the vibrant interactions between members hold a ton of value that would be lost this way. We needed a smarter tool.
+Faker works great when the main concern is the overall look and feel of the application, but it wouldn’t cut it for our use case. The intrinsic meaning of the conversations, the topics, the vibrant interactions between members hold a ton of value that would be lost this way. **We needed a smarter tool.**
 
 That’s why I decided to use OpenAI’s GPT-4. Yes, I used AI to generate conversations that would be analyzed by AI 😅
 
