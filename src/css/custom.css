@@ -99,6 +99,10 @@
   text-transform: uppercase;
 }
 
+.monospace {
+  font-family: monospace;
+}
+
 label {
   width: 100%;
   display: block;
