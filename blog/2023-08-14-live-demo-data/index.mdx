@@ -1,6 +1,6 @@
 ---
-slug: how-we-got-data-for-the-demo-site
-title: How we got data for the demo site
+slug: using-gpt-4-to-generate-realistic-community-conversations
+title: Using GPT-4 to generate realistic community conversations
 authors: [steeve]
 tags: [panoramica]
 ---
@@ -10,27 +10,41 @@ import ThemedImage from "@theme/ThemedImage";
 We recently launched Panoramica, an open source project that makes it easy for developers to work with conversational data and AI.
 You can get a quick feel of how it works by visiting the [demo app](https://demo.panoramica.ai/projects/clkl72myr0000mk081rd0m45g)
 
-Here’s a secret: Every single conversation on this project is fake!
+In the demo, you can explore several threads of community conversations, and explore how Panoramica handles conversational UI, threading, and more.
+
+But here’s a secret: Every single conversation on this project is fake!
 
 <div className="margin-vert--lg center">
   <ThemedImage
     alt="Panoramica demo conversation"
-    sources={{ light: "/img/demo-site-conversation.png", dark: "/img/demo-site-conversation-dark.png" }}
+    sources={{
+      light: "/img/demo-site-conversation.png",
+      dark: "/img/demo-site-conversation-dark.png",
+    }}
     style={{}}
   />
 </div>
 
-We needed a way to get some data in for the world to see. It didn’t feel right or practical to use data from an existing community so we decided to manufacture them.
+We needed a way to get some data in for the world to see. We could have used public data from GitHub or Twitter, but that would have required finding the right subset to make a good demo, plus the work to gather and maintain the data. It didn't feel right or practical, that's why we opted to manufacture the data.
 
-Usually, for such an endeavor, one would use something like [Faker](https://fakerjs.dev/) to generate absolutely random entries.
-But while it works great when the main concern is the overall look and feel of the application, it wouldn’t cut it for our use case.
+Usually, for such an endeavor, one would use something like [Faker](https://fakerjs.dev/) to generate random entries. Faker is pretty great at generating realistic sounding sentences. But let see if we can obtain a conversation this way. With the hacker jargon, we get:
 
-The intrinsic meaning of the conversations, the vibrant interactions between members hold a ton of value that would be lost this way.
+```
+Dave: Copying the program won't do anything, we need to reboot the multi-byte sms microchip
+Sally: We need to connect the bluetooth ADP port!
+Dave: The SMS application is down, copy the bluetooth microchip so we can hack the CSS program!
+Damo: Bypassing the card won't do anything, we need to generate the mobile json monitor!
+```
+
+Can you spot the issue? Each message sounds realistic but this is NOT a conversation. It's completely off and spineless.
+
+Faker works great when the main concern is the overall look and feel of the application, but it wouldn’t cut it for our use case. The intrinsic meaning of the conversations, the topics, the vibrant interactions between members hold a ton of value that would be lost this way. We needed a smarter tool.
+
 That’s why I decided to use OpenAI’s GPT-4. Yes, I used AI to generate conversations that would be analyzed by AI 😅
 
-## How did I achieve it?
+## Generating demo data with GPT-4
 
-I issued the following prompt.
+So how did I partner with ChatGPT to produce realistic data? I issued the following prompt.
 
 ```
 I'm generating some data representing an online community. The community is about a tool similar to OpenSearch but faster because it is written in Rust.
@@ -39,7 +53,7 @@ They mainly interact through Github issues and pull requests on 2 repositories: 
 Each activity is represented by a JSON with the following fields: actor, sourceId, sourceParentId, text, timestamp, timestampInt, actorName, url, mentions, source, sourceType, sourceChannel, globalActor, globalActorName
 
 Fictional Example:
-{ 
+{
   "actor": "molly-9",
   "actorName": "Molly",
   "globalActor": "molly-9",
@@ -71,6 +85,7 @@ Don't hesitate to include technical details to flesh out the text. Do not explai
 ```
 
 Here’s the (truncated) output
+
 ```jsonc
 [
   {
@@ -126,20 +141,28 @@ Here’s the (truncated) output
 ```
 
 As you can see, I started by setting up a well constrained scene. I communicated the data format I was looking for and the relationship between each entry.
-I also added some core members to give the AI something to work from. Then I let GPT-4 do its magic. To be honest, it worked even better than expected.
+I also added some core members to give the AI something to work from. Then I let GPT-4 do its magic.
+
+To be honest, it worked even better than expected. We not only got realistic conversations, but a ready to use JSON with little to no extra glue work needed.
 
 ### Adding more data
-I simply asked for more data incrementally:
+
+Once the initial prompt was working, I simply asked for more data incrementally:
 
 ```
 Good. Now I want a conversation around an issue raised by Dave, where Sally and Damo worked together to figure out the issue. In the end, Dave and another contributor are happy about the answers.
 ```
 
 ### Using the data
+
 I did something similar to generate Discord Conversations in a separate chat.
 Then, it was only a matter of grabbing the Generated JSON, combining them together, cleaning up the actor names and dates where it made sense.
 Once I had the data it was easy to push them up to the demo instance using [Panoramica’s API](https://panoramica.ai/docs/developer-guides/import-data-via-api).
 
-
 ## Is this article AI generated as well?
-Guess.
+
+Well, I’ll leave that to you to decide.
+
+In the meantime, if this kind of project is interesting to you, Panoramica is open source and ready for contribution. Just checkout the project on GitHub here: https://github.com/orbit-love/panoramica
+
+Robots welcome too.
