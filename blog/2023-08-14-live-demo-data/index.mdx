@@ -31,12 +31,13 @@ We needed a way to get some data in for the world to see. We could have used pub
 
 Usually, for such an endeavor, one would use something like [Faker](https://fakerjs.dev/) to generate random entries. Faker is pretty great at generating realistic sounding sentences. But let see if we can obtain a conversation this way. With the hacker jargon, we get:
 
-```
-Dave: Copying the program won't do anything, we need to reboot the multi-byte sms microchip
-Sally: We need to connect the bluetooth ADP port!
-Dave: The SMS application is down, copy the bluetooth microchip so we can hack the CSS program!
-Damo: Bypassing the card won't do anything, we need to generate the mobile json monitor!
-```
+<div className="padding-left--sm">
+  Dave: Copying the program won't do anything, we need to reboot the multi-byte
+  sms microchip Sally: We need to connect the bluetooth ADP port! Dave: The SMS
+  application is down, copy the bluetooth microchip so we can hack the CSS
+  program! Damo: Bypassing the card won't do anything, we need to generate the
+  mobile json monitor!
+</div>
 
 Can you spot the issue? Each message sounds realistic but this is NOT a conversation. It's completely off and spineless.
 
@@ -151,9 +152,11 @@ To be honest, it worked even better than expected. We not only got realistic con
 
 Once the initial prompt was working, I simply asked for more data incrementally:
 
-```
-Good. Now I want a conversation around an issue raised by Dave, where Sally and Damo worked together to figure out the issue. In the end, Dave and another contributor are happy about the answers.
-```
+<div className="padding-left--sm">
+  Good. Now I want a conversation around an issue raised by Dave, where Sally
+  and Damo worked together to figure out the issue. In the end, Dave and another
+  contributor are happy about the answers.
+</div>
 
 ### Using the data
 
