@@ -116,6 +116,17 @@ SMTP_PORT=1025
 SMTP_FROM=contact@yourcompany.com
 ```
 
+## GraphQL
+
+Panoramica exposes 2 GraphQL endpoints, one for logged in users and another for public visitors. These endpoints are defined in the following environment variables. Adjust them to the correct port you are using.
+
+```shell
+NEXT_PUBLIC_URL_SERVER_GRAPHQL=http://localhost:3000/api/graphql
+NEXT_PUBLIC_URL_SERVER_WELCOME_GRAPHQL=http://localhost:3000/api/welcome/graphql
+```
+
+The `NEXT_PUBLIC` prefix allows them to be used on the client as well as the server.
+
 ## The full .env file
 
 Once you've followed all the steps above, your `.env` file should look like this:
@@ -133,6 +144,8 @@ SMTP_USERNAME=project.1
 SMTP_PASSWORD=secret.1
 SMTP_PORT=1025
 SMTP_FROM=contact@yourcompany.com
+NEXT_PUBLIC_URL_SERVER_GRAPHQL=http://localhost:3000/api/graphql
+NEXT_PUBLIC_URL_SERVER_WELCOME_GRAPHQL=http://localhost:3000/api/welcome/graphql
 ```
 
 ## Create the database schema
