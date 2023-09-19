@@ -135,26 +135,61 @@ export default function Home() {
       <Banner />
       <div className="container">
         <main>
-          <div className="row margin-top--lg">
-            <div className="col col--12 center">
-              <ThemedImage
-                alt="Screenshot of the Panoramica application UI"
-                sources={{
-                  light: "/img/ss-demo.svg",
-                  dark: "/img/ss-demo-dark.svg",
-                }}
-              />
+
+          <div className="margin-top--xl">
+            <h1 className="text-xl center">🧰 What does Panoramica do?</h1>
+            <div className="col col--8 col--offset-2 center">
+              <p className="center">
+                Panoramica helps developers{" "}
+                <strong>
+                  build AI-powered experiences on top of conversational data
+                </strong>
+                , from data ingestion to graph construction to interfacing with
+                end users and AI.
+              </p>
             </div>
           </div>
-          <div id="request-access" className="row">
+          <div className="margin-top--lg">&nbsp;</div>
+          <Features featureList={devFeatureList} />
+          <div className="margin-top--lg">&nbsp;</div>
+          
+          <div className="row">
+              <div className="col col--12 center">
+                {
+                  <Link
+                    className="button button--primary button--lg margin--md"
+                    to="https://demo.panoramica.ai/dashboard"
+                  >
+                    💁 Try the demo
+                  </Link>
+                }
+                <span>&nbsp;&nbsp;</span>
+                <Link
+                  className="button button--secondary button--lg margin--md"
+                  to="/docs/category/user-guides"
+                >
+                  📖 Read the user guides
+                </Link>
+                <span>&nbsp;&nbsp;</span>
+                <Link
+                  className="button button--secondary button--lg"
+                  to="#request-access"
+                >
+                  ✅ Signup for access
+                </Link>
+
+              </div>
+          </div>
+
+          <div id="request-access" className="row margin-top--lg margin-bottom--lg">
             <div className="card col col--6 col--offset-3 center shadow--md padding--lg">
               <div className="card__header">
-                <h2>Orbit User? Try a Hosted Version</h2>
+                <h2>Want to learn more?</h2>
               </div>
               <div className="card__body">
                 <p>
                   If you'd like to try Panormica with your existing Orbit
-                  workspace, fill out this form and we'll enable it for you.
+                  workspace, fill out this form and we'll be in touch.
                 </p>
                 <form
                   className="form"
@@ -175,80 +210,7 @@ export default function Home() {
             </div>
             <div className="margin-top--lg">&nbsp;</div>
           </div>
-          <div className="margin-top--xl">
-            <h1 className="text-xl center">🧰 What does Panoramica do?</h1>
-            <div className="col col--8 col--offset-2 center">
-              <p className="center">
-                Panoramica helps developers{" "}
-                <strong>
-                  build AI-powered experiences on top of conversational data
-                </strong>
-                , from data ingestion to graph construction to interfacing with
-                end users and AI.
-              </p>
-            </div>
-          </div>
-          <div className="margin-top--lg">&nbsp;</div>
-          <Features featureList={devFeatureList} />
-          <div className="margin-top--lg">&nbsp;</div>
-          <div className="row">
-            <div className="col col--12 center">
-              <Link
-                className="button button--secondary button--lg"
-                to="/docs/introduction"
-              >
-                💻 Read the developer guides
-              </Link>
-            </div>
-          </div>
 
-          <div className="margin-top--lg">&nbsp;</div>
-          <div className="margin-top--xl">
-            <h1 className="center">
-              💁 Panoramica is a full-stack application
-            </h1>
-            <div className="col col--8 col--offset-2 center">
-              <p className="center">
-                Before you can analyze or get help with a conversation, you need
-                to know it exists. In noisy places like large communities, this
-                is its own challenge. To help, Panoramica includes a flexible,
-                end-user-ready interface for{" "}
-                <strong>
-                  monitoring conversations, bookmarking important ones, and
-                  getting help from AI assistants.
-                </strong>
-              </p>
-            </div>
-          </div>
-          <HomepageFeaturesGeneral />
-          <div className="row">
-            <div className="col col--12 center">
-              {
-                <Link
-                  className="button button--primary button--lg margin--md"
-                  to="https://demo.panoramica.ai/dashboard"
-                >
-                  💁 Try the demo
-                </Link>
-              }
-              <span>&nbsp;&nbsp;</span>
-              <Link
-                className="button button--secondary button--lg margin--md"
-                to="/docs/category/user-guides"
-              >
-                📖 Read the user guides
-              </Link>
-              <span>&nbsp;&nbsp;</span>
-              <Link
-                className="button button--secondary button--lg"
-                to="#request-access"
-              >
-                ✅ Signup for access
-              </Link>
-
-            </div>
-          </div>
-          <div className="margin-top--xl">&nbsp;</div>
         </main>
       </div>
     </Layout>
